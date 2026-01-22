@@ -1,0 +1,4469 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Blak Diamond Social Care Ltd - Specialist care for young people aged 8-18. Transforming lives, building independence with tailored support and accommodation.">
+    <meta name="keywords" content="social care, youth support, supported living, young people, care placements, trauma-informed care, semi-independent living">
+    <meta name="author" content="Blak Diamond Social Care Ltd">
+    <title>Blak Diamond Social Care Ltd | Transforming Lives. Supporting Youth. Building Independence.</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="https://img.icons8.com/color/96/000000/diamond--v1.png">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <style>
+        /* Reset & Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-50: #f0f9ff;
+            --primary-100: #e0f2fe;
+            --primary-500: #0ea5e9;
+            --primary-600: #0284c7;
+            --primary-700: #0369a1;
+            --primary-900: #0c4a6e;
+            --diamond-50: #f8fafc;
+            --diamond-100: #f1f5f9;
+            --diamond-500: #64748b;
+            --diamond-800: #1e293b;
+            --diamond-900: #0f172a;
+            --success: #10b981;
+            --warning: #f59e0b;
+            --danger: #ef4444;
+            --white: #ffffff;
+            --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+            --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+            --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+            --radius-sm: 0.375rem;
+            --radius-md: 0.5rem;
+            --radius-lg: 0.75rem;
+            --radius-xl: 1rem;
+            --radius-2xl: 1.5rem;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', system-ui, -apple-system, sans-serif;
+            color: var(--diamond-900);
+            line-height: 1.6;
+            background-color: var(--diamond-50);
+            overflow-x: hidden;
+        }
+
+        /* Typography */
+        h1, h2, h3, h4, h5, h6 {
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: 1rem;
+        }
+
+        h1 {
+            font-size: 3.5rem;
+            letter-spacing: -0.025em;
+        }
+
+        h2 {
+            font-size: 2.5rem;
+            letter-spacing: -0.025em;
+        }
+
+        h3 {
+            font-size: 1.875rem;
+        }
+
+        h4 {
+            font-size: 1.5rem;
+        }
+
+        p {
+            margin-bottom: 1.5rem;
+            color: var(--diamond-700);
+        }
+
+        .text-lead {
+            font-size: 1.25rem;
+            color: var(--diamond-600);
+        }
+
+        /* Container */
+        .container {
+            width: 100%;
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+
+        /* Buttons */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0.875rem 1.75rem;
+            font-weight: 600;
+            font-size: 1rem;
+            border-radius: var(--radius-lg);
+            transition: all 0.3s ease;
+            cursor: pointer;
+            text-decoration: none;
+            border: none;
+            outline: none;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, var(--primary-600), var(--primary-700));
+            color: var(--white);
+            box-shadow: var(--shadow-md);
+        }
+
+        .btn-primary:hover {
+            background: linear-gradient(135deg, var(--primary-700), var(--primary-800));
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .btn-secondary {
+            background-color: var(--white);
+            color: var(--primary-600);
+            border: 2px solid var(--primary-600);
+        }
+
+        .btn-secondary:hover {
+            background-color: var(--primary-50);
+            transform: translateY(-2px);
+        }
+
+        .btn-lg {
+            padding: 1rem 2.5rem;
+            font-size: 1.125rem;
+        }
+
+        /* Header & Navigation - FIXED STYLES */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            background-color: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            box-shadow: var(--shadow-md);
+            padding: 0.75rem 0;
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            text-decoration: none;
+        }
+
+        .logo-icon {
+            width: 3rem;
+            height: 3rem;
+            background: linear-gradient(135deg, var(--diamond-900), var(--primary-600));
+            border-radius: var(--radius-lg);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            font-weight: 800;
+            font-size: 1.25rem;
+        }
+
+        .logo-text h1 {
+            font-size: 1.5rem;
+            margin-bottom: 0.25rem;
+            color: var(--diamond-900);
+        }
+
+        .logo-text p {
+            font-size: 0.75rem;
+            color: var(--diamond-500);
+            margin-bottom: 0;
+        }
+
+        .nav-menu {
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        .nav-link {
+            color: var(--diamond-700);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+            position: relative;
+        }
+
+        .nav-link:hover {
+            color: var(--primary-600);
+        }
+
+        .nav-link.active {
+            color: var(--primary-600);
+        }
+
+        .nav-link.active::after {
+            content: '';
+            position: absolute;
+            bottom: -0.5rem;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background-color: var(--primary-600);
+            border-radius: 1px;
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            color: var(--diamond-700);
+            cursor: pointer;
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            background: linear-gradient(135deg, var(--diamond-900) 0%, var(--diamond-800) 50%, var(--primary-900) 100%);
+            color: var(--white);
+            overflow: hidden;
+            padding: 6rem 0;
+            margin-top: 80px; /* Added to account for fixed header */
+        }
+
+        .hero-bg-pattern {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0.1;
+            z-index: 1;
+        }
+
+        .hero-bg-pattern::before,
+        .hero-bg-pattern::after,
+        .hero-bg-pattern div {
+            content: '';
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(40px);
+            animation: blob 20s infinite;
+        }
+
+        .hero-bg-pattern::before {
+            width: 300px;
+            height: 300px;
+            background-color: var(--primary-500);
+            top: 10%;
+            left: 10%;
+            animation-delay: 0s;
+        }
+
+        .hero-bg-pattern::after {
+            width: 250px;
+            height: 250px;
+            background-color: var(--diamond-500);
+            top: 60%;
+            right: 10%;
+            animation-delay: 10s;
+        }
+
+        .hero-bg-pattern div {
+            width: 200px;
+            height: 200px;
+            background-color: var(--primary-600);
+            bottom: 10%;
+            left: 20%;
+            animation-delay: 5s;
+        }
+
+        @keyframes blob {
+            0%, 100% {
+                transform: translate(0, 0) scale(1);
+            }
+            33% {
+                transform: translate(30px, -50px) scale(1.1);
+            }
+            66% {
+                transform: translate(-20px, 20px) scale(0.9);
+            }
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .hero-title {
+            font-size: 3.5rem;
+            margin-bottom: 1.5rem;
+            line-height: 1.1;
+        }
+
+        .hero-title span {
+            display: block;
+            color: var(--primary-300);
+            margin-top: 0.5rem;
+        }
+
+        .hero-description {
+            font-size: 1.25rem;
+            color: rgba(255, 255, 255, 0.9);
+            margin-bottom: 2.5rem;
+            max-width: 600px;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .hero-features {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+        }
+
+        .feature-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: var(--radius-xl);
+            padding: 2rem;
+            transition: all 0.3s ease;
+        }
+
+        .feature-card:hover {
+            background: rgba(255, 255, 255, 0.15);
+            border-color: rgba(255, 255, 255, 0.3);
+            transform: translateY(-5px);
+        }
+
+        .feature-icon {
+            font-size: 2rem;
+            color: var(--primary-300);
+            margin-bottom: 1rem;
+        }
+
+        .feature-title {
+            font-size: 1.25rem;
+            margin-bottom: 0.75rem;
+            color: var(--white);
+        }
+
+        .feature-description {
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 0.875rem;
+            margin-bottom: 0;
+        }
+
+        /* Stats Bar */
+        .stats-bar {
+            background: rgba(255, 255, 255, 0.05);
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 2rem 0;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 2rem;
+        }
+
+        .stat-item {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: var(--white);
+            margin-bottom: 0.25rem;
+        }
+
+        .stat-label {
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 0.875rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        /* Sections */
+        section {
+            padding: 6rem 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .section-title h2 {
+            color: var(--diamond-900);
+            margin-bottom: 1rem;
+        }
+
+        .section-subtitle {
+            color: var(--diamond-600);
+            max-width: 800px;
+            margin: 0 auto;
+            font-size: 1.25rem;
+        }
+
+        /* Services Section */
+        .services {
+            background-color: var(--diamond-50);
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+        }
+
+        .service-card {
+            background-color: var(--white);
+            border-radius: var(--radius-xl);
+            overflow: hidden;
+            box-shadow: var(--shadow-lg);
+            transition: all 0.3s ease;
+            border: 1px solid var(--diamond-200);
+        }
+
+        .service-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-xl);
+        }
+
+        .service-icon {
+            width: 3.5rem;
+            height: 3.5rem;
+            background: linear-gradient(135deg, var(--primary-500), var(--primary-600));
+            border-radius: var(--radius-lg);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            margin-bottom: 1.5rem;
+        }
+
+        .service-content {
+            padding: 2rem;
+        }
+
+        .service-title {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--diamond-900);
+        }
+
+        .service-description {
+            color: var(--diamond-600);
+            margin-bottom: 1.5rem;
+        }
+
+        .service-features {
+            list-style: none;
+            margin-bottom: 2rem;
+        }
+
+        .service-features li {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 0.75rem;
+            color: var(--diamond-700);
+        }
+
+        .service-features li i {
+            color: var(--primary-500);
+            margin-right: 0.75rem;
+            margin-top: 0.25rem;
+            flex-shrink: 0;
+        }
+
+        /* Properties Section - UPDATED */
+        .properties {
+            background-color: var(--white);
+        }
+
+        /* Filter Controls */
+        .filter-controls {
+            background: var(--white);
+            padding: 1.5rem;
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-md);
+            margin-bottom: 2rem;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 1rem;
+        }
+
+        .filter-group {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+            align-items: center;
+        }
+
+        .filter-btn {
+            padding: 0.5rem 1rem;
+            background: var(--diamond-100);
+            border: 1px solid var(--diamond-300);
+            border-radius: var(--radius-md);
+            color: var(--diamond-700);
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .filter-btn:hover {
+            background: var(--diamond-200);
+            border-color: var(--diamond-400);
+        }
+
+        .filter-btn.active {
+            background: linear-gradient(135deg, var(--primary-600), var(--primary-700));
+            color: var(--white);
+            border-color: var(--primary-600);
+        }
+
+        .filter-select {
+            padding: 0.5rem 1rem;
+            border: 1px solid var(--diamond-300);
+            border-radius: var(--radius-md);
+            background: var(--white);
+            color: var(--diamond-700);
+            font-weight: 500;
+            cursor: pointer;
+            min-width: 150px;
+        }
+
+        .filter-select:focus {
+            outline: none;
+            border-color: var(--primary-500);
+            box-shadow: 0 0 0 3px rgba(14, 165, 233, 0.1);
+        }
+
+        /* Properties Grid */
+        .properties-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .property-card {
+            background-color: var(--white);
+            border-radius: var(--radius-xl);
+            overflow: hidden;
+            box-shadow: var(--shadow-lg);
+            transition: all 0.3s ease;
+            border: 1px solid var(--diamond-200);
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .property-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-xl);
+        }
+
+        .property-image {
+            height: 200px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .property-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .property-card:hover .property-image img {
+            transform: scale(1.05);
+        }
+
+        .property-badge {
+            position: absolute;
+            top: 1rem;
+            left: 1rem;
+            background-color: rgba(255, 255, 255, 0.95);
+            padding: 0.375rem 1rem;
+            border-radius: 9999px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            color: var(--diamond-900);
+            z-index: 2;
+        }
+
+        .property-tags {
+            position: absolute;
+            bottom: 1rem;
+            left: 1rem;
+            right: 1rem;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .property-tag {
+            background: rgba(0, 0, 0, 0.7);
+            color: var(--white);
+            padding: 0.25rem 0.75rem;
+            border-radius: 9999px;
+            font-size: 0.75rem;
+            font-weight: 500;
+            backdrop-filter: blur(4px);
+        }
+
+        .property-content {
+            padding: 1.5rem;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .property-name {
+            font-size: 1.25rem;
+            margin-bottom: 0.5rem;
+            color: var(--diamond-900);
+        }
+
+        .property-location {
+            display: flex;
+            align-items: center;
+            color: var(--diamond-600);
+            margin-bottom: 0.75rem;
+            font-size: 0.875rem;
+        }
+
+        .property-location i {
+            margin-right: 0.5rem;
+            color: var(--primary-500);
+        }
+
+        .property-description {
+            color: var(--diamond-700);
+            font-size: 0.875rem;
+            line-height: 1.5;
+            margin-bottom: 1rem;
+            flex-grow: 1;
+        }
+
+        .property-features {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+            padding-top: 1rem;
+            border-top: 1px solid var(--diamond-200);
+        }
+
+        .property-feature {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.875rem;
+            color: var(--diamond-600);
+        }
+
+        .property-feature i {
+            color: var(--primary-500);
+        }
+
+        .property-details {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: auto;
+        }
+
+        .property-link {
+            color: var(--primary-600);
+            font-weight: 600;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            transition: color 0.3s ease;
+        }
+
+        .property-link:hover {
+            color: var(--primary-700);
+        }
+
+        .property-link i {
+            margin-left: 0.5rem;
+            transition: transform 0.3s ease;
+        }
+
+        .property-link:hover i {
+            transform: translateX(4px);
+        }
+
+        .properties-count {
+            color: var(--diamond-600);
+            font-size: 0.875rem;
+            margin-top: 1rem;
+        }
+
+        /* Image placeholder gradients */
+        .image-placeholder {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            font-size: 1.5rem;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .image-placeholder.blue {
+            background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+        }
+
+        .image-placeholder.green {
+            background: linear-gradient(135deg, #10b981, #047857);
+        }
+
+        .image-placeholder.purple {
+            background: linear-gradient(135deg, #8b5cf6, #7c3aed);
+        }
+
+        .image-placeholder.orange {
+            background: linear-gradient(135deg, #f59e0b, #d97706);
+        }
+
+        .image-placeholder.teal {
+            background: linear-gradient(135deg, #0ea5e9, #0369a1);
+        }
+
+        .image-placeholder.pink {
+            background: linear-gradient(135deg, #ec4899, #db2777);
+        }
+
+        /* Property Color Variations */
+        .property-card[data-type="standard"] .property-badge {
+            background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+            color: white;
+        }
+
+        .property-card[data-type="high"] .property-badge {
+            background: linear-gradient(135deg, #10b981, #047857);
+            color: white;
+        }
+
+        .property-card[data-type="solo"] .property-badge {
+            background: linear-gradient(135deg, #8b5cf6, #7c3aed);
+            color: white;
+        }
+
+        /* Modal Styles */
+        .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.8);
+            backdrop-filter: blur(8px);
+            z-index: 2000;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            padding: 1rem;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .modal-overlay.active {
+            display: flex;
+            opacity: 1;
+        }
+
+        .modal-container {
+            background: var(--white);
+            border-radius: var(--radius-xl);
+            width: 100%;
+            max-width: 900px;
+            max-height: 90vh;
+            overflow-y: auto;
+            position: relative;
+            animation: modalSlideIn 0.3s ease;
+        }
+
+        @keyframes modalSlideIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .modal-close {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            width: 2.5rem;
+            height: 2.5rem;
+            border-radius: 50%;
+            background: var(--white);
+            border: 1px solid var(--diamond-300);
+            color: var(--diamond-700);
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 2001;
+            transition: all 0.3s ease;
+        }
+
+        .modal-close:hover {
+            background: var(--diamond-100);
+            border-color: var(--diamond-400);
+        }
+
+        .modal-content {
+            padding: 2rem;
+        }
+
+        .modal-header {
+            margin-bottom: 2rem;
+        }
+
+        .modal-title {
+            font-size: 2rem;
+            color: var(--diamond-900);
+            margin-bottom: 0.5rem;
+        }
+
+        .modal-location {
+            display: flex;
+            align-items: center;
+            color: var(--diamond-600);
+            font-size: 1.125rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .modal-location i {
+            margin-right: 0.75rem;
+            color: var(--primary-500);
+        }
+
+        .modal-badges {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+            margin-bottom: 2rem;
+        }
+
+        .modal-badge {
+            background: linear-gradient(135deg, var(--primary-500), var(--primary-600));
+            color: var(--white);
+            padding: 0.5rem 1.25rem;
+            border-radius: var(--radius-md);
+            font-weight: 600;
+            font-size: 0.875rem;
+        }
+
+        .modal-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .modal-image {
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            height: 300px;
+        }
+
+        .modal-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .modal-features {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem;
+        }
+
+        .modal-feature {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            padding: 1rem;
+            background: var(--diamond-50);
+            border-radius: var(--radius-md);
+        }
+
+        .modal-feature i {
+            color: var(--primary-500);
+            font-size: 1.25rem;
+        }
+
+        .modal-section {
+            margin-bottom: 2rem;
+        }
+
+        .modal-section h3 {
+            font-size: 1.5rem;
+            color: var(--diamond-900);
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--diamond-200);
+        }
+
+        .modal-description {
+            color: var(--diamond-700);
+            line-height: 1.7;
+            margin-bottom: 1.5rem;
+        }
+
+        .modal-amenities {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 0.75rem;
+            margin-bottom: 2rem;
+        }
+
+        .modal-amenity {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--diamond-700);
+        }
+
+        .modal-amenity i {
+            color: var(--success);
+        }
+
+        .modal-footer {
+            display: flex;
+            justify-content: flex-end;
+            gap: 1rem;
+            padding-top: 2rem;
+            border-top: 1px solid var(--diamond-200);
+        }
+
+        /* Approach Section */
+        .approach {
+            background: linear-gradient(135deg, var(--diamond-900), var(--diamond-800));
+            color: var(--white);
+        }
+
+        .approach-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+        }
+
+        .approach-item {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: var(--radius-xl);
+            padding: 2rem;
+            transition: all 0.3s ease;
+        }
+
+        .approach-item:hover {
+            background: rgba(255, 255, 255, 0.15);
+            transform: translateY(-5px);
+        }
+
+        .approach-number {
+            font-size: 2rem;
+            font-weight: 800;
+            color: var(--primary-300);
+            margin-bottom: 1rem;
+        }
+
+        .approach-title {
+            font-size: 1.25rem;
+            margin-bottom: 0.75rem;
+            color: var(--white);
+        }
+
+        .approach-description {
+            color: rgba(255, 255, 255, 0.8);
+            margin-bottom: 0;
+        }
+
+        /* Approach Section Title Fix */
+        .approach .section-title h2 {
+            color: var(--white) !important;
+            font-weight: 800 !important;
+            font-size: 2.75rem !important;
+        }
+
+        .approach .section-subtitle {
+            color: rgba(255, 255, 255, 0.9) !important;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            background: linear-gradient(135deg, var(--primary-600), var(--primary-700));
+            color: var(--white);
+            border-radius: var(--radius-2xl);
+            padding: 4rem;
+            text-align: center;
+            margin: 4rem auto;
+            max-width: 1200px;
+            box-shadow: var(--shadow-xl);
+        }
+
+        .cta-title {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: var(--white);
+        }
+
+        .cta-description {
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 1.25rem;
+            max-width: 800px;
+            margin: 0 auto 2.5rem;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        /* Testimonials */
+        .testimonials {
+            background-color: var(--diamond-50);
+        }
+
+        .testimonial-slider {
+            position: relative;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .testimonial-track {
+            display: flex;
+            overflow: hidden;
+            border-radius: var(--radius-xl);
+        }
+
+        .testimonial-slide {
+            min-width: 100%;
+            padding: 3rem;
+            background-color: var(--white);
+            border-radius: var(--radius-xl);
+            box-shadow: var(--shadow-lg);
+            transition: transform 0.5s ease;
+        }
+
+        .testimonial-content {
+            font-size: 1.125rem;
+            font-style: italic;
+            color: var(--diamond-700);
+            margin-bottom: 2rem;
+            line-height: 1.7;
+        }
+
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+        }
+
+        .author-avatar {
+            width: 3rem;
+            height: 3rem;
+            border-radius: 50%;
+            background-color: var(--primary-100);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary-600);
+            font-weight: 600;
+            margin-right: 1rem;
+        }
+
+        .author-info h4 {
+            font-size: 1.125rem;
+            margin-bottom: 0.25rem;
+            color: var(--diamond-900);
+        }
+
+        .author-info p {
+            color: var(--diamond-600);
+            margin-bottom: 0;
+            font-size: 0.875rem;
+        }
+
+        .slider-controls {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+
+        .slider-btn {
+            width: 3rem;
+            height: 3rem;
+            border-radius: 50%;
+            background-color: var(--white);
+            border: 2px solid var(--diamond-300);
+            color: var(--diamond-700);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .slider-btn:hover {
+            background-color: var(--primary-50);
+            border-color: var(--primary-500);
+            color: var(--primary-600);
+        }
+
+        .slider-dots {
+            display: flex;
+            gap: 0.5rem;
+            justify-content: center;
+            margin-top: 1.5rem;
+        }
+
+        .slider-dot {
+            width: 0.75rem;
+            height: 0.75rem;
+            border-radius: 50%;
+            background-color: var(--diamond-300);
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .slider-dot.active {
+            background-color: var(--primary-600);
+            transform: scale(1.2);
+        }
+
+        /* Contact Form */
+        .contact-form-container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: var(--white);
+            border-radius: var(--radius-xl);
+            box-shadow: var(--shadow-xl);
+            overflow: hidden;
+        }
+
+        .form-header {
+            padding: 2rem;
+            background: linear-gradient(135deg, var(--primary-600), var(--primary-700));
+            color: var(--white);
+            text-align: center;
+        }
+
+        .form-title {
+            font-size: 1.75rem;
+            margin-bottom: 0.5rem;
+            color: var(--white);
+        }
+
+        .form-subtitle {
+            color: rgba(255, 255, 255, 0.9);
+        }
+
+        .form-body {
+            padding: 2rem;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+            color: var(--diamond-700);
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 0.875rem 1rem;
+            border: 2px solid var(--diamond-300);
+            border-radius: var(--radius-lg);
+            font-family: inherit;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+        }
+
+        .form-control:focus {
+            outline: none;
+            border-color: var(--primary-500);
+            box-shadow: 0 0 0 3px rgba(14, 165, 233, 0.1);
+        }
+
+        .form-textarea {
+            min-height: 150px;
+            resize: vertical;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+        }
+
+        .form-footer {
+            padding: 1.5rem 2rem;
+            background-color: var(--diamond-50);
+            border-top: 1px solid var(--diamond-200);
+            text-align: center;
+        }
+
+        .form-disclaimer {
+            font-size: 0.875rem;
+            color: var(--diamond-600);
+            margin-bottom: 1rem;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--diamond-900);
+            color: var(--white);
+            padding: 4rem 0 2rem;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 4rem;
+            margin-bottom: 3rem;
+        }
+
+        .footer-logo {
+            margin-bottom: 1.5rem;
+        }
+
+        .footer-logo .logo-text h1 {
+            color: var(--white);
+        }
+
+        .footer-logo .logo-text p {
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        .footer-description {
+            color: rgba(255, 255, 255, 0.8);
+            margin-bottom: 1.5rem;
+        }
+
+        .footer-links-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+        }
+
+        .footer-links h3 {
+            font-size: 1.125rem;
+            margin-bottom: 1.5rem;
+            color: var(--white);
+        }
+
+        .footer-links ul {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 0.75rem;
+        }
+
+        .footer-links a {
+            color: rgba(255, 255, 255, 0.7);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-links a:hover {
+            color: var(--primary-300);
+        }
+
+        .footer-contact li {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 1rem;
+            color: rgba(255, 255, 255, 0.8);
+        }
+
+        .footer-contact i {
+            margin-right: 0.75rem;
+            color: var(--primary-300);
+            margin-top: 0.25rem;
+        }
+
+        .footer-bottom {
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .copyright {
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 0.875rem;
+        }
+
+        .footer-social {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .social-link {
+            width: 2.5rem;
+            height: 2.5rem;
+            border-radius: 50%;
+            background-color: rgba(255, 255, 255, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .social-link:hover {
+            background-color: var(--primary-500);
+            transform: translateY(-2px);
+        }
+
+        /* Mobile Menu */
+        .mobile-menu {
+            position: fixed;
+            top: 0;
+            right: -100%;
+            width: 100%;
+            max-width: 400px;
+            height: 100vh;
+            background-color: var(--white);
+            z-index: 1001;
+            transition: right 0.3s ease;
+            padding: 2rem;
+            box-shadow: var(--shadow-xl);
+            overflow-y: auto;
+        }
+
+        .mobile-menu.active {
+            right: 0;
+        }
+
+        .mobile-menu-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 2rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid var(--diamond-200);
+        }
+
+        .mobile-menu-close {
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            color: var(--diamond-700);
+            cursor: pointer;
+        }
+
+        .mobile-nav {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .mobile-nav-link {
+            padding: 0.75rem 1rem;
+            color: var(--diamond-700);
+            text-decoration: none;
+            font-weight: 500;
+            border-radius: var(--radius-lg);
+            transition: all 0.3s ease;
+        }
+
+        .mobile-nav-link:hover,
+        .mobile-nav-link.active {
+            background-color: var(--primary-50);
+            color: var(--primary-600);
+        }
+
+        .mobile-contact {
+            padding-top: 2rem;
+            border-top: 1px solid var(--diamond-200);
+        }
+
+        .mobile-contact a {
+            display: flex;
+            align-items: center;
+            color: var(--diamond-700);
+            text-decoration: none;
+            margin-bottom: 1rem;
+        }
+
+        .mobile-contact i {
+            margin-right: 0.75rem;
+            color: var(--primary-600);
+        }
+
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 1000;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .overlay.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 1024px) {
+            h1 {
+                font-size: 2.75rem;
+            }
+            
+            h2 {
+                font-size: 2.25rem;
+            }
+            
+            .hero-grid {
+                grid-template-columns: 1fr;
+                gap: 3rem;
+            }
+            
+            .services-grid,
+            .properties-grid,
+            .approach-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .footer-grid {
+                grid-template-columns: 1fr;
+                gap: 3rem;
+            }
+            
+            .modal-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 0 1rem;
+            }
+            
+            section {
+                padding: 4rem 0;
+            }
+            
+            h1 {
+                font-size: 2.25rem;
+            }
+            
+            h2 {
+                font-size: 1.875rem;
+            }
+            
+            .nav-menu {
+                display: none;
+            }
+            
+            .mobile-menu-btn {
+                display: block;
+            }
+            
+            .hero-features {
+                grid-template-columns: 1fr;
+            }
+            
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .services-grid,
+            .properties-grid,
+            .approach-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .filter-controls {
+                flex-direction: column;
+            }
+            
+            .filter-group {
+                width: 100%;
+                justify-content: center;
+            }
+            
+            .cta-section {
+                padding: 3rem 1.5rem;
+                margin: 2rem 1rem;
+            }
+            
+            .cta-title {
+                font-size: 2rem;
+            }
+            
+            .form-row {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+            
+            .footer-links-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            
+            .footer-bottom {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .modal-features,
+            .modal-amenities {
+                grid-template-columns: 1fr;
+            }
+            
+            .modal-footer {
+                flex-direction: column;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 2rem;
+            }
+            
+            h2 {
+                font-size: 1.75rem;
+            }
+            
+            .hero-buttons {
+                flex-direction: column;
+                align-items: stretch;
+            }
+            
+            .hero-buttons .btn {
+                width: 100%;
+                justify-content: center;
+            }
+            
+            .cta-buttons {
+                flex-direction: column;
+                align-items: stretch;
+            }
+            
+            .cta-buttons .btn {
+                width: 100%;
+                justify-content: center;
+            }
+            
+            .stats-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .testimonial-slide {
+                padding: 2rem;
+            }
+            
+            .filter-group {
+                flex-direction: column;
+                align-items: stretch;
+            }
+            
+            .filter-btn,
+            .filter-select {
+                width: 100%;
+                text-align: center;
+            }
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .fade-in-up {
+            animation: fadeInUp 0.6s ease forwards;
+        }
+
+        .delay-1 {
+            animation-delay: 0.2s;
+        }
+
+        .delay-2 {
+            animation-delay: 0.4s;
+        }
+
+        .delay-3 {
+            animation-delay: 0.6s;
+        }
+
+        /* Utility Classes */
+        .text-center {
+            text-align: center;
+        }
+
+        .mb-0 {
+            margin-bottom: 0 !important;
+        }
+
+        .mt-2 {
+            margin-top: 2rem;
+        }
+
+        .mt-4 {
+            margin-top: 4rem;
+        }
+
+        .opacity-0 {
+            opacity: 0;
+        }
+
+        .opacity-100 {
+            opacity: 1;
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: var(--diamond-100);
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: var(--diamond-400);
+            border-radius: 5px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: var(--diamond-500);
+        }
+
+        /* Chatbot & Voice Assistant Styles */
+        .ai-assistant-container {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            z-index: 9999;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            align-items: flex-end;
+        }
+
+        /* Voice Assistant Button */
+        .voice-assistant-btn {
+            width: 3.5rem;
+            height: 3.5rem;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #8B5CF6, #7C3AED);
+            border: none;
+            color: white;
+            font-size: 1.25rem;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 20px rgba(139, 92, 246, 0.4);
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .voice-assistant-btn:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 25px rgba(139, 92, 246, 0.6);
+        }
+
+        .voice-assistant-btn.listening {
+            background: linear-gradient(135deg, #EF4444, #DC2626);
+            animation: pulse 1.5s infinite;
+        }
+
+        .pulse-ring {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            border: 2px solid #8B5CF6;
+            animation: ringPulse 2s infinite;
+            opacity: 0;
+        }
+
+        .pulse-ring-2 {
+            animation-delay: 1s;
+        }
+
+        @keyframes ringPulse {
+            0% {
+                transform: scale(1);
+                opacity: 1;
+            }
+            100% {
+                transform: scale(1.5);
+                opacity: 0;
+            }
+        }
+
+        @keyframes pulse {
+            0% {
+                box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.7);
+            }
+            70% {
+                box-shadow: 0 0 0 15px rgba(239, 68, 68, 0);
+            }
+            100% {
+                box-shadow: 0 0 0 0 rgba(239, 68, 68, 0);
+            }
+        }
+
+        /* Chatbot Button */
+        .chatbot-btn {
+            width: 3.5rem;
+            height: 3.5rem;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #0EA5E9, #0284C7);
+            border: none;
+            color: white;
+            font-size: 1.25rem;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 20px rgba(14, 165, 233, 0.4);
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .chatbot-btn:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 25px rgba(14, 165, 233, 0.6);
+        }
+
+        .notification-badge {
+            position: absolute;
+            top: -5px;
+            right: -5px;
+            background: #EF4444;
+            color: white;
+            font-size: 0.75rem;
+            font-weight: bold;
+            width: 1.25rem;
+            height: 1.25rem;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            animation: bounce 2s infinite;
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-5px); }
+        }
+
+        /* Chatbot Container */
+        .chatbot-container {
+            position: absolute;
+            bottom: 5rem;
+            right: 0;
+            width: 350px;
+            max-width: 90vw;
+            height: 500px;
+            max-height: 70vh;
+            background: white;
+            border-radius: 1rem;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+            display: none;
+            flex-direction: column;
+            overflow: hidden;
+            border: 1px solid #E5E7EB;
+            animation: slideInUp 0.3s ease;
+        }
+
+        .chatbot-container.active {
+            display: flex;
+        }
+
+        .chatbot-header {
+            background: linear-gradient(135deg, #0EA5E9, #0284C7);
+            color: white;
+            padding: 1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .chatbot-header-content {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .chatbot-avatar {
+            width: 2.5rem;
+            height: 2.5rem;
+            background: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #0EA5E9;
+            font-size: 1.25rem;
+        }
+
+        .chatbot-info h3 {
+            font-size: 1rem;
+            margin: 0;
+            color: white;
+        }
+
+        .chatbot-status {
+            font-size: 0.75rem;
+            margin: 0.25rem 0 0;
+            display: flex;
+            align-items: center;
+            gap: 0.25rem;
+        }
+
+        .chatbot-status .online {
+            color: #10B981;
+            font-size: 0.5rem;
+        }
+
+        .chatbot-close {
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1rem;
+            cursor: pointer;
+            padding: 0.25rem;
+        }
+
+        .chatbot-messages {
+            flex: 1;
+            padding: 1rem;
+            overflow-y: auto;
+            background: #F9FAFB;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .message {
+            max-width: 80%;
+            padding: 0.75rem 1rem;
+            border-radius: 1rem;
+            font-size: 0.875rem;
+            line-height: 1.4;
+            animation: fadeIn 0.3s ease;
+        }
+
+        .message.bot {
+            background: white;
+            border: 1px solid #E5E7EB;
+            align-self: flex-start;
+            border-bottom-left-radius: 0.25rem;
+        }
+
+        .message.user {
+            background: linear-gradient(135deg, #0EA5E9, #0284C7);
+            color: white;
+            align-self: flex-end;
+            border-bottom-right-radius: 0.25rem;
+        }
+
+        .message-time {
+            font-size: 0.75rem;
+            opacity: 0.7;
+            margin-top: 0.25rem;
+            display: block;
+        }
+
+        .chatbot-input-container {
+            padding: 1rem;
+            border-top: 1px solid #E5E7EB;
+            background: white;
+        }
+
+        .input-wrapper {
+            position: relative;
+            margin-bottom: 0.75rem;
+        }
+
+        #chatbotInput {
+            width: 100%;
+            padding: 0.75rem 3rem 0.75rem 1rem;
+            border: 1px solid #E5E7EB;
+            border-radius: 2rem;
+            font-size: 0.875rem;
+            transition: all 0.3s ease;
+        }
+
+        #chatbotInput:focus {
+            outline: none;
+            border-color: #0EA5E9;
+            box-shadow: 0 0 0 3px rgba(14, 165, 233, 0.1);
+        }
+
+        .voice-input-btn {
+            position: absolute;
+            right: 0.5rem;
+            top: 50%;
+            transform: translateY(-50%);
+            background: none;
+            border: none;
+            color: #6B7280;
+            cursor: pointer;
+            padding: 0.5rem;
+            transition: color 0.3s ease;
+        }
+
+        .voice-input-btn:hover {
+            color: #0EA5E9;
+        }
+
+        .voice-input-btn.listening {
+            color: #EF4444;
+            animation: microphonePulse 1s infinite;
+        }
+
+        @keyframes microphonePulse {
+            0%, 100% { transform: translateY(-50%) scale(1); }
+            50% { transform: translateY(-50%) scale(1.1); }
+        }
+
+        .quick-actions {
+            display: flex;
+            gap: 0.5rem;
+            margin-bottom: 0.75rem;
+            flex-wrap: wrap;
+        }
+
+        .quick-action {
+            padding: 0.5rem 0.75rem;
+            background: #F3F4F6;
+            border: 1px solid #E5E7EB;
+            border-radius: 1rem;
+            font-size: 0.75rem;
+            color: #4B5563;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 0.25rem;
+        }
+
+        .quick-action:hover {
+            background: #E5E7EB;
+            border-color: #D1D5DB;
+        }
+
+        .disclaimer {
+            font-size: 0.75rem;
+            color: #6B7280;
+            text-align: center;
+            margin-top: 0.5rem;
+        }
+
+        /* Voice Assistant Interface */
+        .voice-assistant-interface {
+            position: absolute;
+            bottom: 5rem;
+            right: 0;
+            width: 350px;
+            max-width: 90vw;
+            background: white;
+            border-radius: 1rem;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+            display: none;
+            flex-direction: column;
+            overflow: hidden;
+            border: 1px solid #E5E7EB;
+            animation: slideInUp 0.3s ease;
+        }
+
+        .voice-assistant-interface.active {
+            display: flex;
+        }
+
+        .voice-header {
+            background: linear-gradient(135deg, #8B5CF6, #7C3AED);
+            color: white;
+            padding: 1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .voice-header h3 {
+            font-size: 1rem;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .voice-close {
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1rem;
+            cursor: pointer;
+            padding: 0.25rem;
+        }
+
+        .voice-content {
+            padding: 1.5rem;
+            text-align: center;
+        }
+
+        .voice-visualizer {
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+            height: 60px;
+            gap: 3px;
+            margin: 1.5rem 0;
+        }
+
+        .voice-visualizer .bar {
+            width: 4px;
+            background: linear-gradient(to top, #8B5CF6, #7C3AED);
+            border-radius: 2px;
+            animation: soundWave 1.5s infinite ease-in-out;
+        }
+
+        .voice-visualizer .bar:nth-child(1) { height: 20%; animation-delay: 0s; }
+        .voice-visualizer .bar:nth-child(2) { height: 40%; animation-delay: 0.1s; }
+        .voice-visualizer .bar:nth-child(3) { height: 60%; animation-delay: 0.2s; }
+        .voice-visualizer .bar:nth-child(4) { height: 80%; animation-delay: 0.3s; }
+        .voice-visualizer .bar:nth-child(5) { height: 100%; animation-delay: 0.4s; }
+        .voice-visualizer .bar:nth-child(6) { height: 80%; animation-delay: 0.5s; }
+        .voice-visualizer .bar:nth-child(7) { height: 60%; animation-delay: 0.6s; }
+        .voice-visualizer .bar:nth-child(8) { height: 40%; animation-delay: 0.7s; }
+
+        @keyframes soundWave {
+            0%, 100% { height: 20%; }
+            50% { height: 100%; }
+        }
+
+        .voice-status {
+            font-size: 0.875rem;
+            color: #4B5563;
+            margin-bottom: 1.5rem;
+            min-height: 1.5rem;
+        }
+
+        .voice-commands {
+            text-align: left;
+            background: #F9FAFB;
+            padding: 1rem;
+            border-radius: 0.5rem;
+            margin-top: 1rem;
+        }
+
+        .voice-commands h4 {
+            font-size: 0.875rem;
+            color: #374151;
+            margin-bottom: 0.5rem;
+        }
+
+        .voice-commands ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .voice-commands li {
+            font-size: 0.75rem;
+            color: #6B7280;
+            padding: 0.25rem 0;
+            border-bottom: 1px solid #E5E7EB;
+        }
+
+        .voice-commands li:last-child {
+            border-bottom: none;
+        }
+     /* Image Carousel Styles */
+.image-carousel {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.carousel-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: opacity 0.5s ease;
+    opacity: 0;
+}
+
+.carousel-image.active {
+    opacity: 1;
+    position: relative;
+}
+
+.carousel-controls {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    transform: translateY(-50%);
+    display: flex;
+    justify-content: space-between;
+    padding: 0 1rem;
+    z-index: 10;
+}
+
+.carousel-controls button {
+    background: rgba(255, 255, 255, 0.9);
+    border: none;
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: var(--diamond-900);
+    transition: all 0.3s ease;
+    box-shadow: var(--shadow-md);
+}
+
+.carousel-controls button:hover {
+    background: var(--white);
+    transform: scale(1.1);
+}
+
+.carousel-indicators {
+    position: absolute;
+    bottom: 1rem;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    z-index: 10;
+}
+
+.carousel-dot {
+    width: 0.75rem;
+    height: 0.75rem;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.carousel-dot.active {
+    background: var(--white);
+    transform: scale(1.2);
+}
+
+/* Modal carousel adjustments */
+.modal-image .image-carousel {
+    height: 300px;
+}
+
+.modal-image .carousel-controls button {
+    background: rgba(255, 255, 255, 0.8);
+}
+/* Make sure buttons are clickable */
+        .carousel-controls button,
+        .carousel-dot {
+            pointer-events: auto;
+        }
+        /* Responsive Design for Chatbot */
+        @media (max-width: 768px) {
+            .ai-assistant-container {
+                bottom: 1rem;
+                right: 1rem;
+            }
+            
+            .chatbot-container,
+            .voice-assistant-interface {
+                width: calc(100vw - 2rem);
+                max-width: none;
+                right: 0;
+                bottom: 4rem;
+            }
+            
+            .voice-assistant-btn,
+            .chatbot-btn {
+                width: 3rem;
+                height: 3rem;
+                font-size: 1rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .quick-actions {
+                justify-content: center;
+            }
+            
+            .quick-action {
+                flex: 1;
+                min-width: calc(50% - 0.5rem);
+                justify-content: center;
+                text-align: center;
+            }
+        }
+    </style>
+<script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/@lottiefiles/lottie-player@latest/dist/lottie-player.js" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.12.2/lottie.min.js" defer></script>
+<style>
+.hero{position:relative;overflow:hidden;}
+.hero-lottie-bg{position:absolute;inset:0;z-index:0;pointer-events:none;}
+.hero-overlay-strong{position:absolute;inset:0;z-index:1;background:radial-gradient(1200px 800px at 20% 10%, rgba(14,165,233,.45), transparent 60%), radial-gradient(1000px 900px at 90% 80%, rgba(56,189,248,.35), transparent 55%);}
+.use-css-hero .css-fallback-shapes{position:absolute;inset:0;z-index:0;overflow:hidden;}
+.use-css-hero .css-fallback-shapes:before, .use-css-hero .css-fallback-shapes:after{content:"";position:absolute;border-radius:50%;filter:blur(40px);opacity:.8;animation:floaty 18s ease-in-out infinite;}
+.use-css-hero .css-fallback-shapes:before{width:45vw;height:45vw;background:linear-gradient(145deg,#22d3ee,#3b82f6);left:-10vw;top:-10vw;}
+.use-css-hero .css-fallback-shapes:after{width:55vw;height:55vw;background:linear-gradient(145deg,#0ea5e9,#22d3ee);right:-15vw;bottom:-15vw;animation-delay:6s;}
+@keyframes floaty{0%,100%{transform:translate(0,0) scale(1)}33%{transform:translate(2vw,-2vw) scale(1.06)}66%{transform:translate(-1.5vw,2vw) scale(.94)}}
+</style>
+</head>
+<body>
+    <!-- Header & Navigation -->
+    <header id="header">
+        <div class="container header-container">
+            <a href="#" class="logo">
+                <div class="logo-icon">BD</div>
+                <div class="logo-text">
+                    <h1>Blak Diamond</h1>
+                    <p>Social Care Ltd</p>
+                </div>
+            </a>
+            
+            <nav class="nav-menu">
+                <a href="#" class="nav-link active">Home</a>
+                <a href="#services" class="nav-link">Our Services</a>
+                <a href="#properties" class="nav-link">Our Homes</a>
+                <a href="#approach" class="nav-link">Our Approach</a>
+                <a href="#contact" class="nav-link">Contact</a>
+                <a href="#referral" class="btn btn-primary">Make a Referral</a>
+            </nav>
+            
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <div class="mobile-menu-header">
+            <div class="logo">
+                <div class="logo-icon">BD</div>
+                <div class="logo-text">
+                    <h1>Blak Diamond</h1>
+                    <p>Social Care Ltd</p>
+                </div>
+            </div>
+            <button class="mobile-menu-close" id="mobileMenuClose">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        
+        <nav class="mobile-nav">
+            <a href="#" class="mobile-nav-link active">Home</a>
+            <a href="#services" class="mobile-nav-link">Our Services</a>
+            <a href="#properties" class="mobile-nav-link">Our Homes</a>
+            <a href="#approach" class="mobile-nav-link">Our Approach</a>
+            <a href="#testimonials" class="mobile-nav-link">Testimonials</a>
+            <a href="#contact" class="mobile-nav-link">Contact</a>
+        </nav>
+        
+        <div class="mobile-contact">
+            <a href="tel:+447491237921">
+                <i class="fas fa-phone"></i>
+                +44 (0)7491 237921
+            </a>
+            <a href="mailto:info@blakdiamond.co.uk">
+                <i class="fas fa-envelope"></i>
+                info@blakdiamond.co.uk
+            </a>
+            <a href="#referral" class="btn btn-primary">Make a Referral</a>
+        </div>
+    </div>
+    
+    <div class="overlay" id="overlay"></div>
+
+    <!-- Hero Section -->
+    <section class="hero">
+  <div class="hero-lottie-bg" aria-hidden="true">
+    <div class="css-fallback-shapes" aria-hidden="true"></div>
+  </div>
+  <div class="hero-overlay-strong" aria-hidden="true"></div>
+
+  <div class="hero-lottie-container">
+    <lottie-player src='https://assets2.lottiefiles.com/packages/lf20_9kwqh892.json' background="transparent" speed="1" loop autoplay></lottie-player>
+  </div>
+  <div class="hero-overlay"></div>
+  <div class="hero-content animated-hero">
+    <h1 class="hero-title">Transforming Lives.<span>Building Independence.</span></h1>
+    <p class="hero-description">Specialist social care for young people aged 8–18.</p>
+    <div class="hero-buttons"><a href="#referral" class="btn btn-primary btn-lg">Make a Referral</a><a href="#services" class="btn btn-secondary btn-lg">Our Services</a></div>
+  </div>
+</section>
+
+    <!-- Stats Bar -->
+    <div class="stats-bar">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <div class="stat-number">24/7</div>
+                    <div class="stat-label">Support Available</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">14+</div>
+                    <div class="stat-label">Specialist Homes</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">8-18</div>
+                    <div class="stat-label">Age Range Supported</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">100%</div>
+                    <div class="stat-label">Safeguarding Focus</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <div class="section-title fade-in-up">
+                <h2>Our Specialist Services</h2>
+                <p class="section-subtitle">
+                    We provide comprehensive social care ecosystems spanning housing, support, 
+                    and clinical guidance for vulnerable young people.
+                </p>
+            </div>
+            
+            <div class="services-grid">
+                <div class="service-card fade-in-up delay-1">
+                    <div class="service-content">
+                        <div class="service-icon">
+                            <i class="fas fa-home"></i>
+                        </div>
+                        <h3 class="service-title">Supported Living Accommodation</h3>
+                        <p class="service-description">
+                            Safe, structured housing options combining residential care with skills-based 
+                            support for stability and emotional growth.
+                        </p>
+                        <ul class="service-features">
+                            <li><i class="fas fa-check"></i> 24/7 on-site support staff</li>
+                            <li><i class="fas fa-check"></i> Personalized care plans</li>
+                            <li><i class="fas fa-check"></i> Life skills development</li>
+                            <li><i class="fas fa-check"></i> Community integration</li>
+                        </ul>
+                        <a href="#contact" class="btn btn-primary">Learn More</a>
+                    </div>
+                </div>
+                
+                <div class="service-card fade-in-up delay-2">
+                    <div class="service-content">
+                        <div class="service-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h3 class="service-title">Solo & High-Support Placements</h3>
+                        <p class="service-description">
+                            Individualized placements for young people with significant behavioral or 
+                            emotional needs transitioning from secure settings.
+                        </p>
+                        <ul class="service-features">
+                            <li><i class="fas fa-check"></i> 1:1 specialist support</li>
+                            <li><i class="fas fa-check"></i> Trauma-informed care</li>
+                            <li><i class="fas fa-check"></i> Multi-agency collaboration</li>
+                            <li><i class="fas fa-check"></i> Secure transition planning</li>
+                        </ul>
+                        <a href="#contact" class="btn btn-primary">Learn More</a>
+                    </div>
+                </div>
+                
+                <div class="service-card fade-in-up delay-3">
+                    <div class="service-content">
+                        <div class="service-icon">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                        <h3 class="service-title">Personalized Care & Support</h3>
+                        <p class="service-description">
+                            Care services adjusted to meet complex needs in both residential and 
+                            home-based settings for comfort and continuity.
+                        </p>
+                        <ul class="service-features">
+                            <li><i class="fas fa-check"></i> Tailored support packages</li>
+                            <li><i class="fas fa-check"></i> Family involvement</li>
+                            <li><i class="fas fa-check"></i> Cultural sensitivity</li>
+                            <li><i class="fas fa-check"></i> Outcome-focused planning</li>
+                        </ul>
+                        <a href="#contact" class="btn btn-primary">Learn More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Properties Section - UPDATED -->
+    <section id="properties" class="properties">
+        <div class="container">
+            <div class="section-title fade-in-up">
+                <h2>Our Homes</h2>
+                <p class="section-subtitle">
+                    Network of 14 nurturing households across multiple locations, each designed 
+                    to feel like a stable home with access to amenities and community spaces.
+                </p>
+            </div>
+            
+            <!-- Filter Controls -->
+            <div class="filter-controls fade-in-up">
+                <div class="filter-group">
+                    <button class="filter-btn active" data-filter="all">All Properties</button>
+                    <button class="filter-btn" data-filter="northamptonshire">Northamptonshire</button>
+                    <button class="filter-btn" data-filter="nottingham">Nottingham</button>
+                    <button class="filter-btn" data-filter="romford">Romford Area</button>
+                    <button class="filter-btn" data-filter="surrey">Surrey</button>
+                    <button class="filter-btn" data-filter="kettering">Kettering</button>
+                    <button class="filter-btn" data-filter="havering">Havering</button>
+                    <button class="filter-btn" data-filter="corby">Corby</button>
+                </div>
+                
+                <div class="filter-group">
+                    <select class="filter-select" id="bedFilter">
+                        <option value="all">All Bedrooms</option>
+                        <option value="2">2 Bedrooms</option>
+                        <option value="3">3 Bedrooms</option>
+                        <option value="4">4+ Bedrooms</option>
+                    </select>
+                    
+                    <select class="filter-select" id="supportFilter">
+                        <option value="all">All Support Levels</option>
+                        <option value="standard">Standard Support</option>
+                        <option value="high">High Support</option>
+                        <option value="solo">Solo Placements</option>
+                    </select>
+                </div>
+            </div>
+            
+            <!-- Properties Grid -->
+            <div class="properties-grid" id="propertiesGrid">
+                <!-- Properties will be dynamically loaded here -->
+            </div>
+            
+            <div class="text-center mt-4">
+                <p class="properties-count" id="propertiesCount">Loading properties...</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Property Detail Modal -->
+    <div class="modal-overlay" id="propertyModalOverlay">
+        <div class="modal-container">
+            <button class="modal-close" id="modalClose">
+                <i class="fas fa-times"></i>
+            </button>
+            
+            <div class="modal-content" id="modalContent">
+                <!-- Modal content will be loaded here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Approach Section -->
+    <section id="approach" class="approach">
+        <div class="container">
+            <div class="section-title fade-in-up">
+                <h2>Our Youth-Centred Approach</h2>
+                <p class="section-subtitle">
+                    We blend clinical expertise with lived experience-informed practices 
+                    to guide individuals toward meaningful independence.
+                </p>
+            </div>
+            
+            <div class="approach-grid">
+                <div class="approach-item fade-in-up delay-1">
+                    <div class="approach-number">01</div>
+                    <h3 class="approach-title">Strength-Based Planning</h3>
+                    <p class="approach-description">Focusing on abilities and potential rather than limitations to build confidence and self-efficacy.</p>
+                </div>
+                
+                <div class="approach-item fade-in-up delay-2">
+                    <div class="approach-number">02</div>
+                    <h3 class="approach-title">Holistic Wellbeing</h3>
+                    <p class="approach-description">Supporting emotional, physical, social, and educational development for comprehensive growth.</p>
+                </div>
+                
+                <div class="approach-item fade-in-up delay-3">
+                    <div class="approach-number">03</div>
+                    <h3 class="approach-title">Clear Progression Goals</h3>
+                    <p class="approach-description">Structured pathways with measurable milestones toward independent living and personal growth.</p>
+                </div>
+                
+                <div class="approach-item fade-in-up delay-1">
+                    <div class="approach-number">04</div>
+                    <h3 class="approach-title">Safety & Dignity</h3>
+                    <p class="approach-description">Creating environments of respect, security, and trust where young people feel valued and heard.</p>
+                </div>
+                
+                <div class="approach-item fade-in-up delay-2">
+                    <div class="approach-number">05</div>
+                    <h3 class="approach-title">Skill Building</h3>
+                    <p class="approach-description">Practical life skills development for sustainable independence including budgeting, cooking, and self-care.</p>
+                </div>
+                
+                <div class="approach-item fade-in-up delay-3">
+                    <div class="approach-number">06</div>
+                    <h3 class="approach-title">Cultural Sensitivity</h3>
+                    <p class="approach-description">Respecting and incorporating diverse backgrounds, beliefs, and traditions into care plans.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <div class="container">
+        <div class="cta-section fade-in-up">
+            <h2 class="cta-title">Ready to Make a Difference?</h2>
+            <p class="cta-description">
+                Join local authorities, families, and professionals who trust Blak Diamond 
+                to provide exceptional care and support for vulnerable young people.
+            </p>
+            <div class="cta-buttons">
+                <a href="#referral" class="btn btn-primary btn-lg">
+                    Make a Referral
+                </a>
+                <a href="#contact" class="btn btn-secondary btn-lg">
+                    Contact Our Team
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials">
+        <div class="container">
+            <div class="section-title fade-in-up">
+                <h2>What Our Partners Say</h2>
+                <p class="section-subtitle">
+                    Feedback from local authorities, families, and professionals who have worked with us.
+                </p>
+            </div>
+            
+            <div class="testimonial-slider">
+                <div class="testimonial-track" id="testimonialTrack">
+                    <div class="testimonial-slide">
+                        <div class="testimonial-content">
+                            "Blak Diamond has been instrumental in supporting our most vulnerable young people. Their trauma-informed approach and dedicated staff have made a significant difference in outcomes. The communication and collaboration with our team has been exceptional throughout."
+                        </div>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">JS</div>
+                            <div class="author-info">
+                                <h4>Jane Smith</h4>
+                                <p>Social Work Team Manager, London Borough of Camden</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="testimonial-slide">
+                        <div class="testimonial-content">
+                            "After trying several providers, we found Blak Diamond to be the only one who truly understood our son's complex needs. The personalized care plan and consistent key worker relationship have helped him make progress we never thought possible. We're grateful for their support."
+                        </div>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">MR</div>
+                            <div class="author-info">
+                                <h4>Michael & Rachel Johnson</h4>
+                                <p>Parents of a young person in care</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="testimonial-slide">
+                        <div class="testimonial-content">
+                            "The quality of accommodation and professionalism of staff at Blak Diamond properties exceeds expectations. Their reporting is thorough, and they're always proactive in addressing any concerns. They've become our go-to provider for complex placements."
+                        </div>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">DC</div>
+                            <div class="author-info">
+                                <h4>David Chen</h4>
+                                <p>Commissioning Officer, Essex County Council</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="slider-controls">
+                    <button class="slider-btn" id="prevBtn">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <button class="slider-btn" id="nextBtn">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+                
+                <div class="slider-dots" id="sliderDots">
+                    <span class="slider-dot active" data-slide="0"></span>
+                    <span class="slider-dot" data-slide="1"></span>
+                    <span class="slider-dot" data-slide="2"></span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact & Referral Form -->
+    <section id="contact">
+        <div class="container">
+            <div class="section-title fade-in-up">
+                <h2>Get in Touch</h2>
+                <p class="section-subtitle">
+                    Contact us to discuss placements, make a referral, or learn more about our services.
+                </p>
+            </div>
+            
+            <div class="contact-form-container fade-in-up">
+                <div class="form-header">
+                    <h3 class="form-title" id="referral">Make a Referral or Enquiry</h3>
+                    <p class="form-subtitle">Complete the form below and our team will respond within 24 hours.</p>
+                </div>
+                
+                <form id="contactForm" class="form-body">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="fullName" class="form-label">Full Name *</label>
+                            <input type="text" id="fullName" name="fullName" class="form-control" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email" class="form-label">Email Address *</label>
+                            <input type="email" id="email" name="email" class="form-control" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="phone" class="form-label">Phone Number *</label>
+                            <input type="tel" id="phone" name="phone" class="form-control" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="organization" class="form-label">Organization</label>
+                            <input type="text" id="organization" name="organization" class="form-control">
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="enquiryType" class="form-label">Type of Enquiry *</label>
+                        <select id="enquiryType" name="enquiryType" class="form-control" required>
+                            <option value="">Please select...</option>
+                            <option value="referral">Make a Referral</option>
+                            <option value="placement">Placement Enquiry</option>
+                            <option value="general">General Enquiry</option>
+                            <option value="careers">Careers/Recruitment</option>
+                            <option value="partnership">Partnership Opportunity</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message" class="form-label">Message *</label>
+                        <textarea id="message" name="message" class="form-control form-textarea" required></textarea>
+                    </div>
+                    
+                    <div class="form-group">
+                        <div class="form-check">
+                            <input type="checkbox" id="privacyPolicy" name="privacyPolicy" class="form-check-input" required>
+                            <label for="privacyPolicy" class="form-check-label">
+                                I agree to the <a href="#" style="color: var(--primary-600);">Privacy Policy</a> and understand my data will be processed in accordance with GDPR regulations.
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <div class="form-footer">
+                        <p class="form-disclaimer">
+                            All referrals are treated with strict confidentiality. Our team will contact you to discuss next steps.
+                        </p>
+                        <button type="submit" class="btn btn-primary btn-lg">
+                            <i class="fas fa-paper-plane mr-2"></i>
+                            Send Message
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-about">
+                    <div class="footer-logo">
+                        <div class="logo">
+                            <div class="logo-icon">BD</div>
+                            <div class="logo-text">
+                                <h1>Blak Diamond</h1>
+                                <p>Social Care Ltd</p>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="footer-description">
+                        Transforming lives and building independence for young people aged 8-18 through 
+                        specialist social care and supported living accommodations.
+                    </p>
+                    <div class="footer-contact">
+                        <ul>
+                            <li>
+                                <i class="fas fa-map-marker-alt"></i>
+                                Registered Head Office: Romford, Essex, RM3 8BS
+                            </li>
+                            <li>
+                                <i class="fas fa-phone"></i>
+                                +44 (0)7491 237921 | +44 (0)7544 787579
+                            </li>
+                            <li>
+                                <i class="fas fa-envelope"></i>
+                                info@blakdiamond.co.uk
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="footer-links-grid">
+                    <div class="footer-links">
+                        <h3>Services</h3>
+                        <ul>
+                            <li><a href="#services">Supported Living</a></li>
+                            <li><a href="#services">Solo Placements</a></li>
+                            <li><a href="#services">High-Support Care</a></li>
+                            <li><a href="#services">Behavioral Support</a></li>
+                            <li><a href="#services">Transition Planning</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-links">
+                        <h3>Company</h3>
+                        <ul>
+                            <li><a href="#about">About Us</a></li>
+                            <li><a href="#approach">Our Approach</a></li>
+                            <li><a href="#properties">Our Homes</a></li>
+                            <li><a href="#careers">Careers</a></li>
+                            <li><a href="#contact">Contact</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-links">
+                        <h3>Resources</h3>
+                        <ul>
+                            <li><a href="#faq">FAQ</a></li>
+                            <li><a href="#policies">Policies</a></li>
+                            <li><a href="#safeguarding">Safeguarding</a></li>
+                            <li><a href="#complaints">Complaints Procedure</a></li>
+                            <li><a href="#privacy">Privacy Policy</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="copyright">
+                    &copy; 2024 Blak Diamond Social Care Ltd. All rights reserved. 
+                    Registered in England & Wales. CQC Registered.
+                </div>
+                <div class="footer-social">
+                    <a href="#" class="social-link" aria-label="LinkedIn">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="#" class="social-link" aria-label="Twitter">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="#" class="social-link" aria-label="Facebook">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Chatbot & Voice Assistant Integration -->
+    <div class="ai-assistant-container">
+        <!-- Voice Assistant Button -->
+        <button class="voice-assistant-btn" id="voiceAssistantBtn" aria-label="Voice Assistant">
+            <i class="fas fa-microphone"></i>
+            <span class="pulse-ring"></span>
+            <span class="pulse-ring pulse-ring-2"></span>
+        </button>
+        
+        <!-- Chatbot Button -->
+        <button class="chatbot-btn" id="chatbotBtn" aria-label="Open Chatbot">
+            <i class="fas fa-comments"></i>
+            <span class="notification-badge" id="messageNotification">3</span>
+        </button>
+        
+        <!-- Chatbot Container -->
+        <div class="chatbot-container" id="chatbotContainer">
+            <div class="chatbot-header">
+                <div class="chatbot-header-content">
+                    <div class="chatbot-avatar">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <div class="chatbot-info">
+                        <h3>Blak Diamond Assistant</h3>
+                        <p class="chatbot-status" id="chatbotStatus">
+                            <i class="fas fa-circle online"></i> Online now
+                        </p>
+                    </div>
+                </div>
+                <button class="chatbot-close" id="chatbotClose">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            
+            <div class="chatbot-messages" id="chatbotMessages">
+                <!-- Messages will be added here -->
+            </div>
+            
+            <div class="chatbot-input-container">
+                <div class="input-wrapper">
+                    <input type="text" 
+                           id="chatbotInput" 
+                           placeholder="Type your message here..."
+                           aria-label="Chat message input">
+                    <button class="voice-input-btn" id="voiceInputBtn" aria-label="Voice input">
+                        <i class="fas fa-microphone"></i>
+                    </button>
+                </div>
+                <div class="quick-actions">
+                    <button class="quick-action" data-action="referral">
+                        <i class="fas fa-user-plus"></i> Make Referral
+                    </button>
+                    <button class="quick-action" data-action="properties">
+                        <i class="fas fa-home"></i> View Properties
+                    </button>
+                    <button class="quick-action" data-action="contact">
+                        <i class="fas fa-phone"></i> Contact Us
+                    </button>
+                </div>
+                <div class="disclaimer">
+                    <small>AI Assistant available 24/7. For emergencies call +44 (0)7491 237921</small>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Voice Assistant Interface -->
+        <div class="voice-assistant-interface" id="voiceAssistantInterface">
+            <div class="voice-header">
+                <h3><i class="fas fa-microphone"></i> Voice Assistant</h3>
+                <button class="voice-close" id="voiceClose">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="voice-content">
+                <div class="voice-visualizer" id="voiceVisualizer">
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                </div>
+                <p class="voice-status" id="voiceStatus">Click the microphone to start speaking</p>
+                <div class="voice-commands">
+                    <h4>Try saying:</h4>
+                    <ul>
+                        <li>"Show me available properties"</li>
+                        <li>"How to make a referral"</li>
+                        <li>"Contact information"</li>
+                        <li>"Emergency support"</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Header is always visible (no scroll effect)
+            const header = document.getElementById('header');
+            
+            // Mobile menu functionality
+            const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+            const mobileMenuClose = document.getElementById('mobileMenuClose');
+            const mobileMenu = document.getElementById('mobileMenu');
+            const overlay = document.getElementById('overlay');
+            const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
+            const navLinks = document.querySelectorAll('.nav-link');
+
+            function openMobileMenu() {
+                mobileMenu.classList.add('active');
+                overlay.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            }
+
+            function closeMobileMenu() {
+                mobileMenu.classList.remove('active');
+                overlay.classList.remove('active');
+                document.body.style.overflow = 'auto';
+            }
+
+            mobileMenuBtn.addEventListener('click', openMobileMenu);
+            mobileMenuClose.addEventListener('click', closeMobileMenu);
+            overlay.addEventListener('click', closeMobileMenu);
+
+            // Close mobile menu when clicking on a link
+            mobileNavLinks.forEach(link => {
+                link.addEventListener('click', closeMobileMenu);
+            });
+
+            // Testimonial slider
+            const testimonialTrack = document.getElementById('testimonialTrack');
+            const prevBtn = document.getElementById('prevBtn');
+            const nextBtn = document.getElementById('nextBtn');
+            const sliderDots = document.getElementById('sliderDots').children;
+            let currentSlide = 0;
+            const totalSlides = testimonialTrack.children.length;
+
+            function updateSlider() {
+                testimonialTrack.style.transform = `translateX(-${currentSlide * 100}%)`;
+                
+                // Update dots
+                for (let i = 0; i < sliderDots.length; i++) {
+                    if (i === currentSlide) {
+                        sliderDots[i].classList.add('active');
+                    } else {
+                        sliderDots[i].classList.remove('active');
+                    }
+                }
+            }
+
+            nextBtn.addEventListener('click', function() {
+                currentSlide = (currentSlide + 1) % totalSlides;
+                updateSlider();
+            });
+
+            prevBtn.addEventListener('click', function() {
+                currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+                updateSlider();
+            });
+
+            // Dot navigation
+            for (let i = 0; i < sliderDots.length; i++) {
+                sliderDots[i].addEventListener('click', function() {
+                    currentSlide = parseInt(this.getAttribute('data-slide'));
+                    updateSlider();
+                });
+            }
+
+            // Auto slide every 5 seconds
+            setInterval(function() {
+                currentSlide = (currentSlide + 1) % totalSlides;
+                updateSlider();
+            }, 5000);
+
+            // Form submission
+            const contactForm = document.getElementById('contactForm');
+            
+            contactForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                // Basic validation
+                const fullName = document.getElementById('fullName').value.trim();
+                const email = document.getElementById('email').value.trim();
+                const phone = document.getElementById('phone').value.trim();
+                const message = document.getElementById('message').value.trim();
+                const privacyPolicy = document.getElementById('privacyPolicy').checked;
+                
+                if (!fullName || !email || !phone || !message || !privacyPolicy) {
+                    alert('Please fill in all required fields and agree to the privacy policy.');
+                    return;
+                }
+                
+                // Email validation
+                const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                if (!emailRegex.test(email)) {
+                    alert('Please enter a valid email address.');
+                    return;
+                }
+                
+                // Phone validation (basic)
+                const phoneRegex = /^[\d\s\-\+\(\)]+$/;
+                if (!phoneRegex.test(phone)) {
+                    alert('Please enter a valid phone number.');
+                    return;
+                }
+                
+                // In a real implementation, this would send data to a server
+                // For now, we'll show a success message
+                const submitBtn = contactForm.querySelector('button[type="submit"]');
+                const originalText = submitBtn.innerHTML;
+                
+                submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin mr-2"></i> Sending...';
+                submitBtn.disabled = true;
+                
+                // Simulate API call
+                setTimeout(function() {
+                    alert('Thank you for your message! Our team will respond within 24 hours.');
+                    contactForm.reset();
+                    submitBtn.innerHTML = originalText;
+                    submitBtn.disabled = false;
+                    
+                    // Scroll to top of form
+                    contactForm.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }, 1500);
+            });
+
+            // Navigation active state management
+            function setActiveNavLink() {
+                const urlHash = window.location.hash;
+                const scrollPosition = window.scrollY;
+                
+                // If we're at the top of the page, set Home as active
+                if (scrollPosition < 300 && (!urlHash || urlHash === '#')) {
+                    navLinks.forEach(link => {
+                        link.classList.remove('active');
+                        if (link.getAttribute('href') === '#') {
+                            link.classList.add('active');
+                        }
+                    });
+                    mobileNavLinks.forEach(link => {
+                        link.classList.remove('active');
+                        if (link.getAttribute('href') === '#') {
+                            link.classList.add('active');
+                        }
+                    });
+                    return;
+                }
+                
+                // Otherwise, set active based on hash
+                navLinks.forEach(link => {
+                    link.classList.remove('active');
+                    if (link.getAttribute('href') === urlHash) {
+                        link.classList.add('active');
+                    }
+                });
+                
+                mobileNavLinks.forEach(link => {
+                    link.classList.remove('active');
+                    if (link.getAttribute('href') === urlHash) {
+                        link.classList.add('active');
+                    }
+                });
+            }
+            
+            // Set active nav on scroll
+            window.addEventListener('scroll', setActiveNavLink);
+            
+            // Set active nav on hash change
+            window.addEventListener('hashchange', setActiveNavLink);
+            
+            // Set initial active state
+            setActiveNavLink();
+            
+            // Navigation click handler
+            function handleNavClick(e) {
+                // Remove active class from all links
+                navLinks.forEach(l => l.classList.remove('active'));
+                mobileNavLinks.forEach(l => l.classList.remove('active'));
+                
+                // Add active class to clicked link
+                this.classList.add('active');
+                
+                // Update corresponding link in other menu
+                const href = this.getAttribute('href');
+                if (href) {
+                    if (this.classList.contains('nav-link')) {
+                        const mobileLink = document.querySelector(`.mobile-nav-link[href="${href}"]`);
+                        if (mobileLink) mobileLink.classList.add('active');
+                    } else {
+                        const desktopLink = document.querySelector(`.nav-link[href="${href}"]`);
+                        if (desktopLink) desktopLink.classList.add('active');
+                    }
+                }
+            }
+            
+            // Add click handlers to all nav links
+            navLinks.forEach(link => {
+                link.addEventListener('click', handleNavClick);
+            });
+            
+            mobileNavLinks.forEach(link => {
+                link.addEventListener('click', handleNavClick);
+            });
+
+            // Smooth scrolling for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    const href = this.getAttribute('href');
+                    
+                    // Skip if it's just "#"
+                    if (href === '#') {
+                        e.preventDefault();
+                        window.scrollTo({
+                            top: 0,
+                            behavior: 'smooth'
+                        });
+                        return;
+                    }
+                    
+                    e.preventDefault();
+                    
+                    const targetElement = document.querySelector(href);
+                    if (targetElement) {
+                        const headerHeight = header.offsetHeight;
+                        const targetPosition = targetElement.offsetTop - headerHeight - 20;
+                        
+                        window.scrollTo({
+                            top: targetPosition,
+                            behavior: 'smooth'
+                        });
+                        
+                        // Update URL hash without triggering scroll
+                        history.pushState(null, null, href);
+                        setActiveNavLink();
+                    }
+                });
+            });
+
+            // Intersection Observer for fade-in animations
+            const fadeElements = document.querySelectorAll('.fade-in-up');
+            
+            const fadeObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('opacity-100');
+                        fadeObserver.unobserve(entry.target);
+                    }
+                });
+            }, {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            });
+            
+            fadeElements.forEach(element => {
+                element.classList.add('opacity-0');
+                fadeObserver.observe(element);
+            });
+
+            // Form enquiry type change
+            const enquiryType = document.getElementById('enquiryType');
+            const messageField = document.getElementById('message');
+            
+            enquiryType.addEventListener('change', function() {
+                const type = this.value;
+                let placeholder = 'Please provide details about your enquiry...';
+                
+                switch(type) {
+                    case 'referral':
+                        placeholder = 'Please provide details about the young person, including age, current situation, and support needs...';
+                        break;
+                    case 'placement':
+                        placeholder = 'Please specify the type of placement needed, preferred locations, and timeline...';
+                        break;
+                    case 'careers':
+                        placeholder = 'Please specify the role you\'re interested in and attach your CV if available...';
+                        break;
+                }
+                
+                messageField.placeholder = placeholder;
+            });
+
+            // ============================================
+            // PROPERTIES MODAL FUNCTIONALITY
+            // ============================================
+
+             // ============================================
+            // PROPERTIES MODAL FUNCTIONALITY WITH CAROUSEL
+            // ============================================
+
+            // Property Data - All 10 essential properties
+            const properties = [
+                {
+                    id: 1,
+                    name: "Anfield House",
+                    location: "Northamptonshire",
+                    filterLocation: "northamptonshire",
+                    bedrooms: 4,
+                    supportLevel: "high",
+                    type: "high",
+                    description: "Anfield House is an end-of-terrace house with four bedrooms, each with its own bathroom.",
+                    fullDescription: "Anfield House is an end-of-terrace house that is freehold and has four bedrooms. Each bedroom has its own bathroom. Additionally, there are two reception areas, a large lounge, a separate kitchen and dining room, a communal area, an office, and a garden that can be accessed from both the kitchen and dining room.",
+                    features: [
+                        { icon: "fa-bed", label: "4 bedrooms" },
+                        { icon: "fa-bath", label: "En-suite bathrooms" },
+                        { icon: "fa-home", label: "Two reception areas" },
+                        { icon: "fa-tree", label: "Garden access" }
+                    ],
+                    amenities: [
+                        "Large lounge",
+                        "Separate kitchen/dining",
+                        "Communal area",
+                        "Office space",
+                        "Garden access",
+                        "End-of-terrace house",
+                        "Freehold property"
+                    ],
+                    color: "blue",
+                    imageFiles: ["Anfield_House.png", "Anfield_House2.png"]
+                },
+                {
+                    id: 2,
+                    name: "Compton House",
+                    location: "Kettering",
+                    filterLocation: "kettering",
+                    bedrooms: 3,
+                    supportLevel: "standard",
+                    type: "standard",
+                    description: "Compton House features 3 bedrooms, a lounge/diner, and is located near Kettering town centre.",
+                    fullDescription: "Compton Place, also known as Compton House, is a property that features 3 bedrooms, a lounge/diner, a separate kitchen, and a rear garden. It is located around a mile away from Kettering town centre and falls under the jurisdiction of the Kettering local authority/council.",
+                    features: [
+                        { icon: "fa-bed", label: "3 bedrooms" },
+                        { icon: "fa-couch", label: "Lounge/diner" },
+                        { icon: "fa-utensils", label: "Separate kitchen" },
+                        { icon: "fa-tree", label: "Rear garden" }
+                    ],
+                    amenities: [
+                        "Close to local schools",
+                        "Close to local GPs",
+                        "Near surgeries",
+                        "1 mile to town centre",
+                        "1 mile to nearest bus stop",
+                        "Kettering local authority"
+                    ],
+                    color: "purple",
+                    imageFiles: ["Compton_House.png", "Compton_House2.png"]
+                },
+                {
+                    id: 3,
+                    name: "Haydon House",
+                    location: "Chadwell Heath, Romford",
+                    filterLocation: "romford",
+                    bedrooms: 3,
+                    supportLevel: "standard",
+                    type: "standard",
+                    description: "Haydon House is a pleasant family sized home in Chadwell Heath, Romford area with three bedrooms.",
+                    fullDescription: "Haydon House is a pleasant family sized home in Chadwell Heath, Romford area. There are three bedrooms in the house, a large lounge/diner, a separate kitchen, garden to both front and rear. Haydon house is located a bus ride away from the local shopping mall that provides all the necessary amenities.",
+                    features: [
+                        { icon: "fa-bed", label: "3 bedrooms" },
+                        { icon: "fa-couch", label: "Large lounge/diner" },
+                        { icon: "fa-utensils", label: "Separate kitchen" },
+                        { icon: "fa-tree", label: "Front & rear garden" }
+                    ],
+                    amenities: [
+                        "Bus ride to shopping mall",
+                        "Main line railway station",
+                        "Quiet residential area",
+                        "Park nearby",
+                        "All necessary amenities available"
+                    ],
+                    color: "green",
+                    imageFiles: ["Haydon_House.png"]
+                },
+                {
+                    id: 4,
+                    name: "Heathfields House",
+                    location: "Ashtead, Surrey",
+                    filterLocation: "surrey",
+                    bedrooms: 3,
+                    supportLevel: "standard",
+                    type: "standard",
+                    description: "Heathfields House is a pleasant family sized home in Ashtead, Surrey with three bedrooms.",
+                    fullDescription: "Heathfield House is a pleasant family sized home in Ashtead, Surrey. There are three bedrooms in the house, a large lounge / diner, a separate kitchen, garden to both front and rear. There are two protected nature reserves in Ashtead: Ashtead Common, a 181 ha (450-acre) woodland.",
+                    features: [
+                        { icon: "fa-bed", label: "3 bedrooms" },
+                        { icon: "fa-couch", label: "Large lounge/diner" },
+                        { icon: "fa-utensils", label: "Separate kitchen" },
+                        { icon: "fa-tree", label: "Front & rear garden" }
+                    ],
+                    amenities: [
+                        "Near Ashtead Common",
+                        "Protected nature reserves",
+                        "Main line railway station",
+                        "181 ha woodland nearby",
+                        "City of London Corporation managed area"
+                    ],
+                    color: "pink",
+                    imageFiles: ["Heathfields_House.png"]
+                },
+                {
+                    id: 5,
+                    name: "Lawson House",
+                    location: "Kettering, Northampton",
+                    filterLocation: "kettering",
+                    bedrooms: 3,
+                    supportLevel: "standard",
+                    type: "standard",
+                    description: "Lawson House is a pleasant family sized home in Kettering, Northampton with three bedrooms.",
+                    fullDescription: "Lawson House is a pleasant family sized home in Kettering, Northampton. There are three bedrooms in the house, a large lounge, a separate kitchen and dining room, garden to both front and rear. Lawson is located a short walk from the local town centre which provides all the necessary amenities.",
+                    features: [
+                        { icon: "fa-bed", label: "3 bedrooms" },
+                        { icon: "fa-home", label: "Large lounge" },
+                        { icon: "fa-utensils", label: "Separate kitchen/dining" },
+                        { icon: "fa-tree", label: "Front & rear garden" }
+                    ],
+                    amenities: [
+                        "Short walk to town centre",
+                        "Main line railway station",
+                        "Swimming pool nearby",
+                        "Quiet residential area",
+                        "Park nearby",
+                        "All necessary amenities nearby"
+                    ],
+                    color: "orange",
+                    imageFiles: ["Lawson_House.png", "Lawson_House2.png"]
+                },
+                {
+                    id: 6,
+                    name: "Oakland House",
+                    location: "Kettering, Northamptonshire",
+                    filterLocation: "kettering",
+                    bedrooms: 4,
+                    supportLevel: "high",
+                    type: "high",
+                    description: "Oakland House is a Victorian House in Kettering, Northamptonshire with four bedrooms.",
+                    fullDescription: "Oakland House is a Victorian House in Kettering, Northamptonshire. There are four bedrooms in the house, separate kitchen, dining, and lounge area. Park House has a large garden at the back and is located opposite a park.",
+                    features: [
+                        { icon: "fa-bed", label: "4 bedrooms" },
+                        { icon: "fa-landmark", label: "Victorian house" },
+                        { icon: "fa-utensils", label: "Separate kitchen/dining" },
+                        { icon: "fa-tree", label: "Large garden" }
+                    ],
+                    amenities: [
+                        "Opposite a park",
+                        "Close to local schools",
+                        "10 minutes walk to GP surgery",
+                        "Large garden at the back",
+                        "Separate living areas"
+                    ],
+                    color: "blue",
+                    imageFiles: ["Oakland_House.png", "Oakland_House2.png"]
+                },
+                {
+                    id: 7,
+                    name: "Orchard House",
+                    location: "Kettering",
+                    filterLocation: "kettering",
+                    bedrooms: 3,
+                    supportLevel: "standard",
+                    type: "standard",
+                    description: "Orchard House is a freehold semi-detached house with three bedrooms in Kettering.",
+                    fullDescription: "Orchard House is a freehold semi-detached house with three bedrooms and one reception room. The property is located in the Kettering local authority/council area, approximately one mile from the town center. The house benefits from having understanding and supportive neighbours who are in favor of any new development in their area.",
+                    features: [
+                        { icon: "fa-bed", label: "3 bedrooms" },
+                        { icon: "fa-home", label: "Semi-detached" },
+                        { icon: "fa-users", label: "Supportive neighbours" },
+                        { icon: "fa-map-marker-alt", label: "1 mile to town centre" }
+                    ],
+                    amenities: [
+                        "Understanding neighbours",
+                        "Supportive community",
+                        "19-minute walk to bus stop",
+                        "Kettering local authority",
+                        "Freehold property"
+                    ],
+                    color: "orange",
+                    imageFiles: ["Orchard_House.png", "Orchard_House2.png"]
+                },
+                {
+                    id: 8,
+                    name: "Ribblesdale House",
+                    location: "Corby",
+                    filterLocation: "corby",
+                    bedrooms: 3,
+                    supportLevel: "solo",
+                    type: "solo",
+                    description: "Ribblesdale House is a three-bedroom semi-detached house ideal for semi-independent living.",
+                    fullDescription: "Ribblesdale House is a three-bedroom, 1 reception, freehold semi-detached house. The property offers a secure and comfortable environment ideal for young people transitioning into semi-independent living. With its spacious layout, the house provides both private and communal areas, promoting both independence and community interaction.",
+                    features: [
+                        { icon: "fa-bed", label: "3 bedrooms" },
+                        { icon: "fa-home", label: "Semi-detached" },
+                        { icon: "fa-user-graduate", label: "Semi-independent living" },
+                        { icon: "fa-map-marker-alt", label: "1 mile to town centre" }
+                    ],
+                    amenities: [
+                        "Spacious layout",
+                        "Private and communal areas",
+                        "Promotes independence",
+                        "Community interaction",
+                        "14-minute walk to bus stop",
+                        "Corby local authority",
+                        "Secure environment"
+                    ],
+                    color: "purple",
+                    imageFiles: ["Ribblesdale_House.png", "Ribblesdale_House2.png"]
+                },
+                {
+                    id: 9,
+                    name: "Springhill House",
+                    location: "Northamptonshire",
+                    filterLocation: "northamptonshire",
+                    bedrooms: 3,
+                    supportLevel: "high",
+                    type: "high",
+                    description: "Springhill House is a well-equipped, newly refurbished grade II building residential children's home.",
+                    fullDescription: "Springhill House is a well-equipped, newly refurbished grade II building residential children's home located in Northamptonshire, opposite Northampton Hospital, offering a safe, nurturing, and supportive environment for children. The home features 3 large children's bedrooms and 2 staff rooms, a spacious lounge, dining area, indoor cinema room, laundry room, 4 toilets, 2 bathrooms, office facilities for staff, and a large kitchen that can accommodate all residents.",
+                    features: [
+                        { icon: "fa-bed", label: "3 children's bedrooms" },
+                        { icon: "fa-user-tie", label: "2 staff rooms" },
+                        { icon: "fa-film", label: "Indoor cinema room" },
+                        { icon: "fa-home", label: "Spacious lounge & dining" }
+                    ],
+                    amenities: [
+                        "Direct access to Northampton Hospital",
+                        "Local school nearby",
+                        "Bus stop outside the gate",
+                        "Nearby local parks",
+                        "Laundry room",
+                        "4 toilets, 2 bathrooms",
+                        "Office facilities for staff",
+                        "Large kitchen"
+                    ],
+                    color: "blue",
+                    imageFiles: ["Springhill_House.png", "Springhill_House2.png"]
+                },
+                {
+                    id: 10,
+                    name: "Willowherb House",
+                    location: "Romford area",
+                    filterLocation: "romford",
+                    bedrooms: 3,
+                    supportLevel: "standard",
+                    type: "standard",
+                    description: "Willowherb House is a pleasant family sized home in the Romford area with three bedrooms.",
+                    fullDescription: "Willowherb House is a pleasant family sized home in the Romford area. There are three bedrooms in the house, a large lounge/diner, a separate kitchen, garden to both front and rear. Willowherb House is 5 minutes' walk away to the nearest bus stop.",
+                    features: [
+                        { icon: "fa-bed", label: "3 bedrooms" },
+                        { icon: "fa-couch", label: "Large lounge/diner" },
+                        { icon: "fa-utensils", label: "Separate kitchen" },
+                        { icon: "fa-tree", label: "Front & rear garden" }
+                    ],
+                    amenities: [
+                        "5 minutes walk to bus stop",
+                        "Bosworth Field Park nearby",
+                        "Broadford primary school nearby",
+                        "London Borough of Redbridge",
+                        "Heaton Ward of Havering",
+                        "Less than half a mile to school"
+                    ],
+                    color: "teal",
+                    imageFiles: ["Willowherb_House.png", "Willowherb_House2.png"]
+                }
+            ];
+            // Carousel Functions - Fixed version
+function initializeCarousels() {
+    // Add event listeners for all carousel controls using event delegation
+    document.addEventListener('click', function(e) {
+        // Check if clicked element is a carousel prev button
+        if (e.target.closest('.carousel-prev')) {
+            const carousel = e.target.closest('.image-carousel');
+            if (carousel) {
+                navigateCarousel(carousel, 'prev');
+            }
+        }
+        
+        // Check if clicked element is a carousel next button
+        if (e.target.closest('.carousel-next')) {
+            const carousel = e.target.closest('.image-carousel');
+            if (carousel) {
+                navigateCarousel(carousel, 'next');
+            }
+        }
+        
+        // Check if clicked element is a carousel dot
+        if (e.target.classList.contains('carousel-dot')) {
+            const dot = e.target;
+            const carousel = dot.closest('.image-carousel');
+            if (carousel) {
+                const dots = carousel.querySelectorAll('.carousel-dot');
+                const index = Array.from(dots).indexOf(dot);
+                goToCarouselSlide(carousel, index);
+            }
+        }
+    });
+}
+
+function navigateCarousel(carousel, direction) {
+    const images = carousel.querySelectorAll('.carousel-image');
+    const dots = carousel.querySelectorAll('.carousel-dot');
+    
+    if (images.length <= 1) return;
+    
+    let currentIndex = 0;
+    
+    // Find current active image
+    images.forEach((img, index) => {
+        if (img.classList.contains('active')) {
+            currentIndex = index;
+        }
+    });
+    
+    // Remove active class from current image and dot
+    images[currentIndex].classList.remove('active');
+    if (dots[currentIndex]) {
+        dots[currentIndex].classList.remove('active');
+    }
+    
+    // Calculate new index
+    let newIndex;
+    if (direction === 'next') {
+        newIndex = (currentIndex + 1) % images.length;
+    } else { // prev
+        newIndex = (currentIndex - 1 + images.length) % images.length;
+    }
+    
+    // Add active class to new image and dot
+    images[newIndex].classList.add('active');
+    if (dots[newIndex]) {
+        dots[newIndex].classList.add('active');
+    }
+    
+    // Reset auto-rotation timer
+    resetCarouselAutoRotation(carousel);
+}
+
+function goToCarouselSlide(carousel, index) {
+    const images = carousel.querySelectorAll('.carousel-image');
+    const dots = carousel.querySelectorAll('.carousel-dot');
+    
+    if (index < 0 || index >= images.length) return;
+    
+    // Remove active from all
+    images.forEach(img => img.classList.remove('active'));
+    dots.forEach(dot => dot.classList.remove('active'));
+    
+    // Set active on selected
+    images[index].classList.add('active');
+    if (dots[index]) {
+        dots[index].classList.add('active');
+    }
+    
+    // Reset auto-rotation timer
+    resetCarouselAutoRotation(carousel);
+}
+
+// Auto-rotation for carousels
+let carouselIntervals = new Map();
+
+function startCarouselAutoRotation() {
+    // Clear all existing intervals
+    carouselIntervals.forEach((interval, carousel) => {
+        clearInterval(interval);
+    });
+    carouselIntervals.clear();
+    
+    // Set up auto-rotation for each carousel with multiple images
+    document.querySelectorAll('.image-carousel').forEach(carousel => {
+        const images = carousel.querySelectorAll('.carousel-image');
+        
+        if (images.length > 1) {
+            const interval = setInterval(() => {
+                navigateCarousel(carousel, 'next');
+            }, 4000); // Rotate every 4 seconds
+            
+            carouselIntervals.set(carousel, interval);
+        }
+    });
+}
+
+function resetCarouselAutoRotation(carousel) {
+    if (carouselIntervals.has(carousel)) {
+        clearInterval(carouselIntervals.get(carousel));
+        
+        const images = carousel.querySelectorAll('.carousel-image');
+        if (images.length > 1) {
+            const interval = setInterval(() => {
+                navigateCarousel(carousel, 'next');
+            }, 4000);
+            
+            carouselIntervals.set(carousel, interval);
+        }
+    }
+}
+
+            // Filter and Display Functions
+            function renderProperties(filteredProperties) {
+                const grid = document.getElementById('propertiesGrid');
+                grid.innerHTML = '';
+                
+                filteredProperties.forEach(property => {
+                    const supportText = {
+                        'standard': 'Standard Support',
+                        'high': 'High Support',
+                        'solo': 'Solo Placements'
+                    }[property.supportLevel];
+                    
+                    const card = document.createElement('div');
+                    card.className = 'property-card fade-in-up';
+                    card.setAttribute('data-type', property.type);
+                    card.setAttribute('data-location', property.filterLocation);
+                    card.setAttribute('data-bedrooms', property.bedrooms);
+                    card.setAttribute('data-support', property.supportLevel);
+                    
+                    // Create image carousel if multiple images exist
+                    let imageContent = '';
+                    if (property.imageFiles && property.imageFiles.length > 0) {
+                        if (property.imageFiles.length === 1) {
+                            // Single image
+                            imageContent = `
+                                <div class="property-image">
+                                    <img src="./images/${property.imageFiles[0]}" alt="${property.name}" style="width: 100%; height: 100%; object-fit: cover;">
+                                </div>
+                            `;
+                        } else {
+                            // Multiple images - create carousel
+                                                        // Multiple images - create carousel
+                            imageContent = `
+                                <div class="property-image">
+                                    <div class="image-carousel" data-property-id="${property.id}">
+                                        ${property.imageFiles.map((img, index) => `
+                                            <img src="./images/${img}" alt="${property.name} - Image ${index + 1}" 
+                                                 class="carousel-image ${index === 0 ? 'active' : ''}"
+                                                 style="width: 100%; height: 100%; object-fit: cover;">
+                                        `).join('')}
+                                        <div class="carousel-controls">
+                                            <button class="carousel-prev">
+                                                <i class="fas fa-chevron-left"></i>
+                                            </button>
+                                            <button class="carousel-next">
+                                                <i class="fas fa-chevron-right"></i>
+                                            </button>
+                                        </div>
+                                        <div class="carousel-indicators">
+                                            ${property.imageFiles.map((_, index) => `
+                                                <span class="carousel-dot ${index === 0 ? 'active' : ''}"></span>
+                                            `).join('')}
+                                        </div>
+                                    </div>
+                                </div>
+                            `;
+                        }
+                    } else {
+                        // Fallback to colored placeholder
+                        imageContent = `
+                            <div class="property-image">
+                                <div class="image-placeholder ${property.color}" style="height: 100%;">
+                                    <i class="fas fa-home fa-3x"></i>
+                                </div>
+                            </div>
+                        `;
+                    }
+                    
+                    card.innerHTML = `
+                        ${imageContent}
+                        <div class="property-content">
+                            <h3 class="property-name">${property.name}</h3>
+                            <div class="property-location">
+                                <i class="fas fa-map-marker-alt"></i>
+                                ${property.location}
+                            </div>
+                            <p class="property-description">${property.description}</p>
+                            <div class="property-features">
+                                <div class="property-feature">
+                                    <i class="fas ${property.features[0].icon}"></i>
+                                    <span>${property.features[0].label}</span>
+                                </div>
+                                <div class="property-feature">
+                                    <i class="fas ${property.features[1].icon}"></i>
+                                    <span>${property.features[1].label}</span>
+                                </div>
+                            </div>
+                            <div class="property-details">
+                                <span class="property-capacity">${property.bedrooms} bedroom${property.bedrooms > 1 ? 's' : ''}</span>
+                                <a href="#" class="property-link view-details" data-id="${property.id}">
+                                    View Details
+                                    <i class="fas fa-arrow-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                    `;
+                    
+                    grid.appendChild(card);
+                });
+                
+                // Update count
+                const countElement = document.getElementById('propertiesCount');
+                countElement.textContent = `Showing ${filteredProperties.length} of ${properties.length} properties`;
+                
+                // Add click handlers to view details buttons
+                document.querySelectorAll('.view-details').forEach(button => {
+                    button.addEventListener('click', function(e) {
+                        e.preventDefault();
+                        const propertyId = parseInt(this.getAttribute('data-id'));
+                        openPropertyModal(propertyId);
+                    });
+                });
+               // Initialize carousels and start auto-rotation
+setTimeout(() => {
+    initializeCarousels();
+    startCarouselAutoRotation();
+}, 100);
+
+                
+                // Observe new elements for fade-in animation
+                const newCards = grid.querySelectorAll('.fade-in-up');
+                newCards.forEach(card => {
+                    card.classList.add('opacity-0');
+                    if (window.fadeObserver) {
+                        fadeObserver.observe(card);
+                    }
+                });
+            }
+
+            function filterProperties() {
+                const activeFilter = document.querySelector('.filter-btn.active').getAttribute('data-filter');
+                const bedFilter = document.getElementById('bedFilter').value;
+                const supportFilter = document.getElementById('supportFilter').value;
+                
+                let filtered = properties;
+                
+                // Filter by location
+                if (activeFilter !== 'all') {
+                    filtered = filtered.filter(property => property.filterLocation === activeFilter);
+                }
+                
+                // Filter by bedrooms
+                if (bedFilter !== 'all') {
+                    const bedCount = parseInt(bedFilter);
+                    if (bedCount === 4) {
+                        filtered = filtered.filter(property => property.bedrooms >= 4);
+                    } else {
+                        filtered = filtered.filter(property => property.bedrooms === bedCount);
+                    }
+                }
+                
+                // Filter by support level
+                if (supportFilter !== 'all') {
+                    filtered = filtered.filter(property => property.supportLevel === supportFilter);
+                }
+                
+                renderProperties(filtered);
+            }
+
+            function openPropertyModal(propertyId) {
+                const property = properties.find(p => p.id === propertyId);
+                if (!property) return;
+                
+                const supportText = {
+                    'standard': 'Standard Support',
+                    'high': 'High Support',
+                    'solo': 'Solo Placements'
+                }[property.supportLevel];
+                
+                // Create modal image content with carousel
+                let modalImageContent = '';
+                if (property.imageFiles && property.imageFiles.length > 0) {
+                    if (property.imageFiles.length === 1) {
+                        modalImageContent = `
+                            <div class="modal-image">
+                                <img src="images/${property.imageFiles[0]}" alt="${property.name}" style="width: 100%; height: 100%; object-fit: cover;">
+                            </div>
+                        `;
+                    } else {
+                                                modalImageContent = `
+                            <div class="modal-image">
+                                <div class="image-carousel" data-property-id="modal-${property.id}">
+                                    ${property.imageFiles.map((img, index) => `
+                                        <img src="./images/${img}" alt="${property.name} - Image ${index + 1}" 
+                                             class="carousel-image ${index === 0 ? 'active' : ''}"
+                                             style="width: 100%; height: 100%; object-fit: cover;">
+                                    `).join('')}
+                                    <div class="carousel-controls">
+                                        <button class="carousel-prev">
+                                            <i class="fas fa-chevron-left"></i>
+                                        </button>
+                                        <button class="carousel-next">
+                                            <i class="fas fa-chevron-right"></i>
+                                        </button>
+                                    </div>
+                                    <div class="carousel-indicators">
+                                        ${property.imageFiles.map((_, index) => `
+                                            <span class="carousel-dot ${index === 0 ? 'active' : ''}"></span>
+                                        `).join('')}
+                                    </div>
+                                </div>
+                            </div>
+                        `;
+                    }
+                } else {
+                    modalImageContent = `
+                        <div class="modal-image">
+                            <div class="image-placeholder ${property.color}" style="height: 100%;">
+                                <i class="fas fa-home fa-3x"></i>
+                            </div>
+                        </div>
+                    `;
+                }
+                
+                const modalContent = document.getElementById('modalContent');
+                modalContent.innerHTML = `
+                    <div class="modal-header">
+                        <h2 class="modal-title">${property.name}</h2>
+                        <div class="modal-location">
+                            <i class="fas fa-map-marker-alt"></i>
+                            ${property.location}
+                        </div>
+                        <div class="modal-badges">
+                            <span class="modal-badge">${supportText}</span>
+                            <span class="modal-badge">${property.bedrooms} Bedroom${property.bedrooms > 1 ? 's' : ''}</span>
+                            <span class="modal-badge">${property.filterLocation.charAt(0).toUpperCase() + property.filterLocation.slice(1)}</span>
+                        </div>
+                    </div>
+                    
+                    <div class="modal-grid">
+                        ${modalImageContent}
+                        <div class="modal-features">
+                            ${property.features.map(feature => `
+                                <div class="modal-feature">
+                                    <i class="fas ${feature.icon}"></i>
+                                    <span>${feature.label}</span>
+                                </div>
+                            `).join('')}
+                        </div>
+                    </div>
+                    
+                    <div class="modal-section">
+                        <h3>About This Property</h3>
+                        <p class="modal-description">${property.fullDescription}</p>
+                    </div>
+                    
+                    <div class="modal-section">
+                        <h3>Amenities & Facilities</h3>
+                        <div class="modal-amenities">
+                            ${property.amenities.map(amenity => `
+                                <div class="modal-amenity">
+                                    <i class="fas fa-check-circle"></i>
+                                    <span>${amenity}</span>
+                                </div>
+                            `).join('')}
+                        </div>
+                    </div>
+                    
+                    <div class="modal-footer">
+                        <a href="#contact" class="btn btn-secondary">
+                            <i class="fas fa-envelope mr-2"></i>
+                            Enquire About This Property
+                        </a>
+                        <a href="#referral" class="btn btn-primary">
+                            <i class="fas fa-user-plus mr-2"></i>
+                            Make a Referral
+                        </a>
+                    </div>
+                `;
+                
+                // Show modal
+                const modalOverlay = document.getElementById('propertyModalOverlay');
+                modalOverlay.classList.add('active');
+                document.body.style.overflow = 'hidden';
+
+            // Initialize carousel for modal
+            setTimeout(() => {
+               initializeCarousels();
+               startCarouselAutoRotation();
+            }, 100);
+
+        }
+
+            // Auto-rotation for carousels
+            let carouselIntervals = {};
+
+            function startCarouselAutoRotation() {
+                // Clear any existing intervals
+                Object.values(carouselIntervals).forEach(interval => clearInterval(interval));
+                carouselIntervals = {};
+                
+                // Find all carousels with multiple images
+                document.querySelectorAll('.image-carousel').forEach(carousel => {
+                    const propertyId = carousel.getAttribute('data-property-id');
+                    const images = carousel.querySelectorAll('.carousel-image');
+                    
+                    // Only auto-rotate if there are multiple images
+                    if (images.length > 1) {
+                        carouselIntervals[propertyId] = setInterval(() => {
+                            if (propertyId.startsWith('modal-')) {
+                                const id = parseInt(propertyId.replace('modal-', ''));
+                                modalCarouselNext(id);
+                            } else {
+                                carouselNext(parseInt(propertyId));
+                            }
+                        }, 4000); // Rotate every 4 seconds
+                    }
+                });
+            }
+
+            // Initialize properties on page load
+            setTimeout(() => {
+                renderProperties(properties);
+                initializeCarousels(); // Add this line
+            }, 100);
+            
+            // Add event listeners for filters
+            document.querySelectorAll('.filter-btn').forEach(btn => {
+                btn.addEventListener('click', function() {
+                    document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+                    this.classList.add('active');
+                    filterProperties();
+                });
+            });
+            
+            document.getElementById('bedFilter').addEventListener('change', filterProperties);
+            document.getElementById('supportFilter').addEventListener('change', filterProperties);
+            
+            // Modal functionality
+            const modalOverlay = document.getElementById('propertyModalOverlay');
+            const modalClose = document.getElementById('modalClose');
+            
+            modalClose.addEventListener('click', function() {
+                modalOverlay.classList.remove('active');
+                document.body.style.overflow = 'auto';
+            });
+            
+            modalOverlay.addEventListener('click', function(e) {
+                if (e.target === modalOverlay) {
+                    modalOverlay.classList.remove('active');
+                    document.body.style.overflow = 'auto';
+                }
+            });
+            
+            // Close modal with Escape key
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape' && modalOverlay.classList.contains('active')) {
+                    modalOverlay.classList.remove('active');
+                    document.body.style.overflow = 'auto';
+                }
+            });
+
+            // ============================================
+            // CHATBOT & VOICE ASSISTANT FUNCTIONALITY
+            // ============================================
+            
+            // DOM Elements
+            const chatbotBtn = document.getElementById('chatbotBtn');
+            const chatbotContainer = document.getElementById('chatbotContainer');
+            const chatbotClose = document.getElementById('chatbotClose');
+            const chatbotMessages = document.getElementById('chatbotMessages');
+            const chatbotInput = document.getElementById('chatbotInput');
+            const voiceInputBtn = document.getElementById('voiceInputBtn');
+            const quickActions = document.querySelectorAll('.quick-action');
+            const voiceAssistantBtn = document.getElementById('voiceAssistantBtn');
+            const voiceAssistantInterface = document.getElementById('voiceAssistantInterface');
+            const voiceClose = document.getElementById('voiceClose');
+            const voiceStatus = document.getElementById('voiceStatus');
+            const voiceVisualizer = document.getElementById('voiceVisualizer');
+            const messageNotification = document.getElementById('messageNotification');
+
+            // Initialize chatbot with welcome message
+            setTimeout(() => {
+                addBotMessage("Hello! I'm the Blak Diamond Assistant. How can I help you today? You can ask me about our services, properties, or how to make a referral.");
+                addBotMessage("Here are some quick things I can help with:");
+                addQuickSuggestions();
+            }, 1000);
+
+            // Chatbot Toggle
+            chatbotBtn.addEventListener('click', () => {
+                chatbotContainer.classList.toggle('active');
+                voiceAssistantInterface.classList.remove('active');
+                // Clear notification when opened
+                messageNotification.style.display = 'none';
+            });
+
+            chatbotClose.addEventListener('click', () => {
+                chatbotContainer.classList.remove('active');
+            });
+
+            // Voice Assistant Toggle
+            voiceAssistantBtn.addEventListener('click', () => {
+                voiceAssistantInterface.classList.toggle('active');
+                chatbotContainer.classList.remove('active');
+            });
+
+            voiceClose.addEventListener('click', () => {
+                voiceAssistantInterface.classList.remove('active');
+                stopVoiceRecognition();
+            });
+
+            // Send message on Enter key
+            chatbotInput.addEventListener('keypress', (e) => {
+                if (e.key === 'Enter' && chatbotInput.value.trim()) {
+                    sendMessage();
+                }
+            });
+
+            // Quick Actions
+            quickActions.forEach(button => {
+                button.addEventListener('click', function() {
+                    const action = this.getAttribute('data-action');
+                    handleQuickAction(action);
+                });
+            });
+
+            // Voice Recognition
+            let recognition;
+            let isListening = false;
+
+            // Check for browser support
+            const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+            
+            if (SpeechRecognition) {
+                recognition = new SpeechRecognition();
+                recognition.continuous = false;
+                recognition.interimResults = false;
+                recognition.lang = 'en-GB';
+
+                recognition.onstart = function() {
+                    isListening = true;
+                    voiceInputBtn.classList.add('listening');
+                    voiceAssistantBtn.classList.add('listening');
+                    voiceStatus.textContent = "Listening... Speak now";
+                    animateVoiceVisualizer(true);
+                };
+
+                recognition.onresult = function(event) {
+                    const transcript = event.results[0][0].transcript;
+                    if (chatbotContainer.classList.contains('active')) {
+                        chatbotInput.value = transcript;
+                        sendMessage();
+                    } else {
+                        handleVoiceCommand(transcript);
+                    }
+                };
+
+                recognition.onerror = function(event) {
+                    console.error('Speech recognition error:', event.error);
+                    voiceStatus.textContent = "Error: " + event.error;
+                    stopVoiceRecognition();
+                };
+
+                recognition.onend = function() {
+                    stopVoiceRecognition();
+                };
+            } else {
+                console.warn('Speech recognition not supported in this browser');
+                voiceInputBtn.style.display = 'none';
+                voiceAssistantBtn.style.display = 'none';
+                voiceStatus.textContent = "Voice features not supported in your browser";
+            }
+
+            // Voice Input Button
+            voiceInputBtn.addEventListener('click', () => {
+                if (!recognition) {
+                    addBotMessage("Sorry, voice input is not supported in your browser. Please type your message.");
+                    return;
+                }
+
+                if (isListening) {
+                    recognition.stop();
+                } else {
+                    recognition.start();
+                }
+            });
+
+            // Voice Assistant Button
+            voiceAssistantBtn.addEventListener('click', (e) => {
+                if (e.target === voiceAssistantBtn && !voiceAssistantInterface.classList.contains('active')) {
+                    if (!recognition) {
+                        voiceStatus.textContent = "Voice features not supported in your browser";
+                        return;
+                    }
+                    
+                    if (isListening) {
+                        recognition.stop();
+                    } else {
+                        recognition.start();
+                    }
+                }
+            });
+
+            function stopVoiceRecognition() {
+                isListening = false;
+                voiceInputBtn.classList.remove('listening');
+                voiceAssistantBtn.classList.remove('listening');
+                voiceStatus.textContent = "Click the microphone to start speaking";
+                animateVoiceVisualizer(false);
+                
+                if (recognition) {
+                    recognition.stop();
+                }
+            }
+
+            function animateVoiceVisualizer(start) {
+                const bars = voiceVisualizer.querySelectorAll('.bar');
+                if (start) {
+                    bars.forEach(bar => bar.style.animationPlayState = 'running');
+                } else {
+                    bars.forEach(bar => bar.style.animationPlayState = 'paused');
+                }
+            }
+
+            // Chatbot Functions
+            function sendMessage() {
+                const message = chatbotInput.value.trim();
+                if (!message) return;
+
+                addUserMessage(message);
+                chatbotInput.value = '';
+                
+                // Simulate typing delay
+                setTimeout(() => {
+                    handleUserMessage(message);
+                }, 500);
+            }
+
+            function addUserMessage(text) {
+                const messageDiv = document.createElement('div');
+                messageDiv.className = 'message user';
+                messageDiv.innerHTML = `
+                    ${text}
+                    <span class="message-time">${getCurrentTime()}</span>
+                `;
+                chatbotMessages.appendChild(messageDiv);
+                scrollToBottom();
+            }
+
+            function addBotMessage(text) {
+                const messageDiv = document.createElement('div');
+                messageDiv.className = 'message bot';
+                messageDiv.innerHTML = `
+                    ${text}
+                    <span class="message-time">${getCurrentTime()}</span>
+                `;
+                chatbotMessages.appendChild(messageDiv);
+                scrollToBottom();
+            }
+
+            function addQuickSuggestions() {
+                const suggestions = [
+                    "Tell me about your properties",
+                    "How do I make a referral?",
+                    "What support services do you offer?",
+                    "Contact your team"
+                ];
+                
+                suggestions.forEach(suggestion => {
+                    const suggestionDiv = document.createElement('div');
+                    suggestionDiv.className = 'message bot';
+                    suggestionDiv.innerHTML = `
+                        <div class="suggestion">${suggestion}</div>
+                        <span class="message-time">Click to select</span>
+                    `;
+                    suggestionDiv.style.cursor = 'pointer';
+                    suggestionDiv.style.border = '1px solid #0EA5E9';
+                    suggestionDiv.style.background = '#F0F9FF';
+                    
+                    suggestionDiv.addEventListener('click', () => {
+                        chatbotInput.value = suggestion;
+                        sendMessage();
+                    });
+                    
+                    chatbotMessages.appendChild(suggestionDiv);
+                });
+                
+                scrollToBottom();
+            }
+
+            function getCurrentTime() {
+                const now = new Date();
+                return now.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+            }
+
+            function scrollToBottom() {
+                chatbotMessages.scrollTop = chatbotMessages.scrollHeight;
+            }
+
+            // Handle User Messages
+            function handleUserMessage(message) {
+                const lowerMessage = message.toLowerCase();
+                
+                // Greetings
+                if (lowerMessage.includes('hello') || lowerMessage.includes('hi') || lowerMessage.includes('hey')) {
+                    addBotMessage("Hello! How can I assist you today?");
+                    return;
+                }
+                
+                // Properties
+                if (lowerMessage.includes('property') || lowerMessage.includes('home') || lowerMessage.includes('house')) {
+                    addBotMessage("We have 14 specialist homes across multiple locations. You can:");
+                    addBotMessage("1. Visit our <a href='#properties' style='color: #0EA5E9; text-decoration: underline;'>Properties section</a> to browse all homes");
+                    addBotMessage("2. Use the filters to find properties by location, bedrooms, or support level");
+                    addBotMessage("3. Click 'View Details' on any property for full information");
+                    addBotMessage("Would you like me to help you find a specific type of property?");
+                    return;
+                }
+                
+                // Referral
+                if (lowerMessage.includes('referral') || lowerMessage.includes('refer')) {
+                    addBotMessage("To make a referral:");
+                    addBotMessage("1. Complete our <a href='#referral' style='color: #0EA5E9; text-decoration: underline;'>online referral form</a>");
+                    addBotMessage("2. Call our team at +44 (0)7491 237921");
+                    addBotMessage("3. Email us at info@blakdiamond.co.uk");
+                    addBotMessage("We respond to all referrals within 24 hours. Do you need help with a specific case?");
+                    return;
+                }
+                
+                // Contact
+                if (lowerMessage.includes('contact') || lowerMessage.includes('phone') || lowerMessage.includes('email')) {
+                    addBotMessage("Contact Information:");
+                    addBotMessage("📞 Phone: +44 (0)7491 237921 | +44 (0)7544 787579");
+                    addBotMessage("📧 Email: info@blakdiamond.co.uk");
+                    addBotMessage("🏢 Address: Registered Head Office: Romford, Essex, RM3 8BS");
+                    addBotMessage("⏰ Office Hours: Monday-Friday 9am-5pm");
+                    addBotMessage("24/7 Emergency Support available");
+                    return;
+                }
+                
+                // Services
+                if (lowerMessage.includes('service') || lowerMessage.includes('support') || lowerMessage.includes('care')) {
+                    addBotMessage("Our specialist services include:");
+                    addBotMessage("• Supported Living Accommodation");
+                    addBotMessage("• Solo & High-Support Placements");
+                    addBotMessage("• Personalized Care & Support");
+                    addBotMessage("• Trauma-informed care for ages 8-18");
+                    addBotMessage("You can learn more in our <a href='#services' style='color: #0EA5E9; text-decoration: underline;'>Services section</a>");
+                    return;
+                }
+                
+                // Emergency
+                if (lowerMessage.includes('emergency') || lowerMessage.includes('urgent') || lowerMessage.includes('immediate')) {
+                    addBotMessage("🚨 <strong>Emergency Contact Information:</strong>");
+                    addBotMessage("For immediate assistance:");
+                    addBotMessage("📞 Emergency Line: +44 (0)7491 237921 (24/7)");
+                    addBotMessage("🏥 Medical Emergency: Call 999");
+                    addBotMessage("👮 Safeguarding Concerns: Contact local authorities");
+                    addBotMessage("Our team is available 24/7 for emergencies.");
+                    return;
+                }
+                
+                // Hours/availability
+                if (lowerMessage.includes('hour') || lowerMessage.includes('open') || lowerMessage.includes('available')) {
+                    addBotMessage("Our availability:");
+                    addBotMessage("📅 Office Hours: Monday-Friday 9am-5pm");
+                    addBotMessage("🌙 Out of Hours: 24/7 emergency support available");
+                    addBotMessage("🤖 AI Assistant: Available 24/7 for general queries");
+                    addBotMessage("You can contact us anytime for urgent matters.");
+                    return;
+                }
+                
+                // Default response
+                addBotMessage("I understand you're asking about: '" + message + "'");
+                addBotMessage("I can help you with:");
+                addBotMessage("• Property information and availability");
+                addBotMessage("• Making referrals");
+                addBotMessage("• Contact information");
+                addBotMessage("• Emergency support");
+                addBotMessage("• Our services and approach");
+                addBotMessage("What specific information would you like?");
+            }
+
+            // Handle Quick Actions
+            function handleQuickAction(action) {
+                switch(action) {
+                    case 'referral':
+                        chatbotInput.value = "How do I make a referral?";
+                        sendMessage();
+                        break;
+                    case 'properties':
+                        chatbotInput.value = "Show me your properties";
+                        sendMessage();
+                        break;
+                    case 'contact':
+                        chatbotInput.value = "What are your contact details?";
+                        sendMessage();
+                        break;
+                }
+            }
+
+            // Handle Voice Commands
+            function handleVoiceCommand(command) {
+                const lowerCommand = command.toLowerCase();
+                
+                if (lowerCommand.includes('property') || lowerCommand.includes('home')) {
+                    voiceStatus.textContent = "Opening properties section...";
+                    setTimeout(() => {
+                        window.location.href = '#properties';
+                        addBotMessage("I've taken you to our properties section. You can browse all 14 homes and use the filters to find what you need.");
+                    }, 1000);
+                }
+                else if (lowerCommand.includes('referral')) {
+                    voiceStatus.textContent = "Taking you to the referral form...";
+                    setTimeout(() => {
+                        window.location.href = '#referral';
+                        addBotMessage("Here's our referral form. You can fill it out online or call +44 (0)7491 237921 for assistance.");
+                    }, 1000);
+                }
+                else if (lowerCommand.includes('contact') || lowerCommand.includes('phone') || lowerCommand.includes('email')) {
+                    voiceStatus.textContent = "Here's our contact information...";
+                    setTimeout(() => {
+                        addBotMessage("📞 Phone: +44 (0)7491 237921 | +44 (0)7544 787579");
+                        addBotMessage("📧 Email: info@blakdiamond.co.uk");
+                        addBotMessage("🏢 Address: Registered Head Office: Romford, Essex, RM3 8BS");
+                        chatbotContainer.classList.add('active');
+                    }, 1000);
+                }
+                else if (lowerCommand.includes('emergency')) {
+                    voiceStatus.textContent = "Emergency contact information...";
+                    setTimeout(() => {
+                        addBotMessage("🚨 <strong>Emergency Contact:</strong> +44 (0)7491 237921 (24/7)");
+                        addBotMessage("For medical emergencies, call 999 immediately.");
+                        chatbotContainer.classList.add('active');
+                    }, 1000);
+                }
+                else {
+                    voiceStatus.textContent = "Opening chat for more help...";
+                    setTimeout(() => {
+                        chatbotContainer.classList.add('active');
+                        addBotMessage("I heard you say: '" + command + "'");
+                        addBotMessage("How can I help you with this?");
+                    }, 1000);
+                }
+                
+                stopVoiceRecognition();
+            }
+
+            // Simulate new message notification
+            setTimeout(() => {
+                messageNotification.textContent = "1";
+                messageNotification.style.display = 'flex';
+            }, 5000);
+
+            // Close interfaces when clicking outside
+            document.addEventListener('click', (e) => {
+                if (!chatbotContainer.contains(e.target) && 
+                    !chatbotBtn.contains(e.target) && 
+                    chatbotContainer.classList.contains('active')) {
+                    chatbotContainer.classList.remove('active');
+                }
+                
+                if (!voiceAssistantInterface.contains(e.target) && 
+                    !voiceAssistantBtn.contains(e.target) && 
+                    voiceAssistantInterface.classList.contains('active')) {
+                    voiceAssistantInterface.classList.remove('active');
+                    stopVoiceRecognition();
+                }
+            });
+
+            // Prevent closing when clicking inside
+            chatbotContainer.addEventListener('click', (e) => {
+                e.stopPropagation();
+            });
+
+            voiceAssistantInterface.addEventListener('click', (e) => {
+                e.stopPropagation();
+            });
+            
+        });
+    </script>
+<script>
+(function(){
+  function useCss(){ document.documentElement.classList.add("use-css-hero"); }
+  function start(){
+    var host=document.querySelector(".hero-lottie-bg"); if(!host){useCss(); return;}
+    if(window.customElements && customElements.get("lottie-player")){
+      var lp=document.createElement("lottie-player");
+      lp.setAttribute("src","https://assets2.lottiefiles.com/packages/lf20_9kwqh892.json");
+      lp.setAttribute("background","transparent"); lp.setAttribute("speed","1");
+      lp.setAttribute("loop",""); lp.setAttribute("autoplay","");
+      lp.style.cssText="position:absolute;inset:0;width:100%;height:100%;";
+      host.appendChild(lp); return;
+    }
+    if(window.lottie){
+      var c=document.createElement("div"); c.id="heroLottieCanvas"; c.style.cssText="position:absolute;inset:0;"; host.appendChild(c);
+      window.lottie.loadAnimation({container:c,renderer:"svg",loop:true,autoplay:true,path:"https://assets2.lottiefiles.com/packages/lf20_9kwqh892.json"});
+      return;
+    }
+    useCss();
+  }
+  if(document.readyState==="complete") start(); else window.addEventListener("load", start);
+})();
+</script>
+</body>
+</html>
