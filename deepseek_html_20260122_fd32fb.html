@@ -1,0 +1,986 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blak Diamond Social Care Ltd | Transforming Lives. Supporting Youth. Building Independence.</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* CSS Variables for Theme Colors */
+        :root {
+            --primary: #0d3b66; /* Deep blue for trust and professionalism */
+            --secondary: #f4a261; /* Warm orange accent for care and warmth */
+            --accent: #2a9d8f; /* Teal for growth and health */
+            --light: #f8f9fa; /* Light background */
+            --dark: #212529; /* Dark text */
+            --gray: #6c757d; /* Gray text */
+            --shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            --transition: all 0.3s ease;
+        }
+
+        /* Reset and Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+            line-height: 1.6;
+            color: var(--dark);
+            background-color: var(--light);
+            overflow-x: hidden;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header & Navigation */
+        header {
+            background-color: white;
+            box-shadow: var(--shadow);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            animation: slideDown 0.5s ease;
+        }
+
+        @keyframes slideDown {
+            from { transform: translateY(-100%); }
+            to { transform: translateY(0); }
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.2rem 0;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo-icon {
+            color: var(--primary);
+            font-size: 1.8rem;
+        }
+
+        .logo-text {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--dark);
+            font-weight: 500;
+            transition: var(--transition);
+            position: relative;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            background: var(--secondary);
+            bottom: -5px;
+            left: 0;
+            transition: var(--transition);
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .mobile-toggle {
+            display: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: var(--primary);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, rgba(13, 59, 102, 0.9) 0%, rgba(42, 157, 143, 0.85) 100%), url('https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 6rem 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at 30% 50%, rgba(244, 162, 97, 0.2) 0%, transparent 50%);
+        }
+
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero h1 {
+            font-size: 3.2rem;
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+            animation: fadeInUp 0.8s ease;
+        }
+
+        .hero-tagline {
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+            font-weight: 300;
+            opacity: 0.9;
+            animation: fadeInUp 0.8s ease 0.2s both;
+        }
+
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+            animation: fadeInUp 0.8s ease 0.4s both;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 0.8rem 1.5rem;
+            border-radius: 50px;
+            backdrop-filter: blur(10px);
+        }
+
+        .contact-icon {
+            color: var(--secondary);
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: var(--secondary);
+            color: var(--dark);
+            padding: 1rem 2.5rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: var(--transition);
+            box-shadow: 0 4px 15px rgba(244, 162, 97, 0.3);
+            animation: fadeInUp 0.8s ease 0.6s both;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(244, 162, 97, 0.4);
+            background: #f3b155;
+        }
+
+        /* Section Styles */
+        section {
+            padding: 5rem 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+            position: relative;
+        }
+
+        .section-title h2 {
+            font-size: 2.5rem;
+            color: var(--primary);
+            display: inline-block;
+            padding-bottom: 10px;
+        }
+
+        .section-title h2::after {
+            content: '';
+            position: absolute;
+            width: 80px;
+            height: 4px;
+            background: var(--secondary);
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        /* About Section */
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .about-text {
+            font-size: 1.1rem;
+        }
+
+        .about-text p {
+            margin-bottom: 1.5rem;
+        }
+
+        .about-image {
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transform: perspective(1000px) rotateY(-5deg);
+            transition: var(--transition);
+        }
+
+        .about-image:hover {
+            transform: perspective(1000px) rotateY(0);
+        }
+
+        .about-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* Services Section */
+        .services {
+            background-color: #f8f9fa;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .service-card {
+            background: white;
+            border-radius: 10px;
+            padding: 2rem;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 5px;
+            height: 100%;
+            background: var(--accent);
+            transition: var(--transition);
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .service-card:hover::before {
+            width: 10px;
+            background: var(--secondary);
+        }
+
+        .service-icon {
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 1.5rem;
+        }
+
+        .service-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--primary);
+        }
+
+        /* Approach Section */
+        .approach-list {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .approach-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1.5rem;
+            padding: 1rem;
+            border-radius: 8px;
+            transition: var(--transition);
+        }
+
+        .approach-item:hover {
+            background-color: rgba(13, 59, 102, 0.05);
+            transform: translateX(10px);
+        }
+
+        .approach-icon {
+            background: var(--primary);
+            color: white;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 1.5rem;
+            flex-shrink: 0;
+        }
+
+        /* Locations Section */
+        .locations {
+            background-color: var(--light);
+        }
+
+        .locations-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .location-card {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .location-card::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: var(--accent);
+            transform: scaleX(0);
+            transition: var(--transition);
+            transform-origin: left;
+        }
+
+        .location-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .location-card:hover::after {
+            transform: scaleX(1);
+        }
+
+        .location-card h4 {
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+        }
+
+        /* Impact Section */
+        .impact-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .impact-item {
+            text-align: center;
+            padding: 2rem;
+            background: white;
+            border-radius: 10px;
+            box-shadow: var(--shadow);
+        }
+
+        .impact-icon {
+            font-size: 2.5rem;
+            color: var(--accent);
+            margin-bottom: 1rem;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--primary);
+            color: white;
+            padding: 4rem 0 2rem;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+
+        .footer-column h3 {
+            font-size: 1.3rem;
+            margin-bottom: 1.5rem;
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+        .footer-column h3::after {
+            content: '';
+            position: absolute;
+            width: 50px;
+            height: 3px;
+            background: var(--secondary);
+            bottom: 0;
+            left: 0;
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 0.8rem;
+        }
+
+        .footer-links a {
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .footer-links a:hover {
+            color: var(--secondary);
+            padding-left: 5px;
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 992px) {
+            .hero h1 {
+                font-size: 2.8rem;
+            }
+            
+            .about-content {
+                grid-template-columns: 1fr;
+                gap: 3rem;
+            }
+            
+            .about-image {
+                order: -1;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .navbar {
+                flex-wrap: wrap;
+            }
+            
+            .nav-links {
+                display: none;
+                width: 100%;
+                flex-direction: column;
+                gap: 1rem;
+                margin-top: 1.5rem;
+                padding-top: 1.5rem;
+                border-top: 1px solid rgba(0, 0, 0, 0.1);
+            }
+            
+            .nav-links.active {
+                display: flex;
+            }
+            
+            .mobile-toggle {
+                display: block;
+            }
+            
+            .hero h1 {
+                font-size: 2.4rem;
+            }
+            
+            .hero-tagline {
+                font-size: 1.3rem;
+            }
+            
+            .contact-info {
+                flex-direction: column;
+                align-items: center;
+                gap: 1rem;
+            }
+            
+            section {
+                padding: 3rem 0;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .section-title h2 {
+                font-size: 2rem;
+            }
+            
+            .service-card, .impact-item, .location-card {
+                padding: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header & Navigation -->
+    <header>
+        <div class="container">
+            <nav class="navbar">
+                <div class="logo">
+                    <div class="logo-icon">
+                        <i class="fas fa-gem"></i>
+                    </div>
+                    <div class="logo-text">Blak Diamond</div>
+                </div>
+                
+                <div class="mobile-toggle" id="mobileToggle">
+                    <i class="fas fa-bars"></i>
+                </div>
+                
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="#about">Who We Are</a></li>
+                    <li><a href="#services">What We Do</a></li>
+                    <li><a href="#approach">Our Approach</a></li>
+                    <li><a href="#locations">Our Locations</a></li>
+                    <li><a href="#impact">Why We Matter</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Blak Diamond Social Care Ltd</h1>
+                <p class="hero-tagline">Transforming Lives. Supporting Youth. Building Independence.</p>
+                
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt contact-icon"></i>
+                        <span>Romford, Essex, RM3 8BS</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone contact-icon"></i>
+                        <span>+44 (0)7491 237921 | +44 (0)7544 787579</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope contact-icon"></i>
+                        <span>info@blakdiamond.co.uk</span>
+                    </div>
+                </div>
+                
+                <a href="#contact" class="cta-button">Make a Referral</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="section-title">
+                <h2>Who We Are</h2>
+            </div>
+            
+            <div class="about-content">
+                <div class="about-text">
+                    <p>Blak Diamond Social Care Ltd is a specialist social care provider focused on supporting young people aged 8–18, especially those transitioning through challenging circumstances toward semi-independent living. Our mission is to foster growth, resilience and self-sufficiency by delivering tailored, reliable care and accommodation solutions.</p>
+                    <p>We operate with a youth-centred philosophy, blending clinical expertise with lived experience-informed practices to guide individuals toward meaningful independence. Our team is led by experienced social workers and care professionals with strong backgrounds in trauma, behavioural support and multi-agency collaboration.</p>
+                </div>
+                <div class="about-image">
+                    <img src="https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Blak Diamond Team Supporting Youth">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <div class="section-title">
+                <h2>What We Do</h2>
+            </div>
+            
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-home"></i>
+                    </div>
+                    <h3>Supported Living Accommodation</h3>
+                    <p>Safe, structured housing options that combine residential care with skills-based support. Environments are designed for stability, learning and emotional growth.</p>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-user-shield"></i>
+                    </div>
+                    <h3>Solo & High-Support Placements</h3>
+                    <p>Individualised placements for young people with significant behavioural or emotional needs—especially those transitioning from secure settings or under court orders.</p>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-hands-helping"></i>
+                    </div>
+                    <h3>Personalised Care & Domiciliary Support</h3>
+                    <p>Care services adjusted to meet complex needs, delivered in both residential and home-based settings to promote comfort and continuity.</p>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <h3>Behavioural Intervention & Developmental Support</h3>
+                    <p>Specialised strategies to manage challenging behaviours while building life skills, social functioning and personal responsibility.</p>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3>Staff Training & Development Programs</h3>
+                    <p>Continuous professional development ensures our staff deliver care that is safe, evidence-led, responsive and compassionate.</p>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-exchange-alt"></i>
+                    </div>
+                    <h3>Referral & Transition Support</h3>
+                    <p>Collaborative work with local authorities, families, educators and health professionals to create smooth transitional pathways out of care.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Approach Section -->
+    <section id="approach" class="approach">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Approach</h2>
+            </div>
+            
+            <div class="approach-list">
+                <div class="approach-item">
+                    <div class="approach-icon">
+                        <i class="fas fa-bullseye"></i>
+                    </div>
+                    <div>
+                        <h3>Strength-based planning</h3>
+                        <p>We focus on building upon each young person's unique strengths and capabilities.</p>
+                    </div>
+                </div>
+                
+                <div class="approach-item">
+                    <div class="approach-icon">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <div>
+                        <h3>Holistic wellbeing support</h3>
+                        <p>Addressing physical, emotional, social, and educational needs for comprehensive care.</p>
+                    </div>
+                </div>
+                
+                <div class="approach-item">
+                    <div class="approach-icon">
+                        <i class="fas fa-flag-checkered"></i>
+                    </div>
+                    <div>
+                        <h3>Clear progression goals</h3>
+                        <p>Establishing measurable milestones to track development toward independence.</p>
+                    </div>
+                </div>
+                
+                <div class="approach-item">
+                    <div class="approach-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <div>
+                        <h3>Safety, dignity and respect</h3>
+                        <p>Creating environments where young people feel secure, valued, and heard.</p>
+                    </div>
+                </div>
+                
+                <div class="approach-item">
+                    <div class="approach-icon">
+                        <i class="fas fa-tools"></i>
+                    </div>
+                    <div>
+                        <h3>Skill building toward independence</h3>
+                        <p>Practical training in life skills essential for successful independent living.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <p style="text-align: center; margin-top: 2rem; font-style: italic; max-width: 800px; margin-left: auto; margin-right: auto;">
+                We reject one-size-fits-all care. Instead, we invest in meaningful relationships that open doors to future opportunities.
+            </p>
+        </div>
+    </section>
+
+    <!-- Locations Section -->
+    <section id="locations" class="locations">
+        <div class="container">
+            <div class="section-title">
+                <h2>Places We Deliver Support</h2>
+            </div>
+            
+            <p style="text-align: center; margin-bottom: 3rem; max-width: 800px; margin-left: auto; margin-right: auto;">
+                We operate a network of homes across multiple locations, each set up to feel like a stable, nurturing household with access to amenities, transport links and community spaces.
+            </p>
+            
+            <div class="locations-grid">
+                <div class="location-card">
+                    <h4>Springhill House</h4>
+                    <p>Northamptonshire</p>
+                </div>
+                
+                <div class="location-card">
+                    <h4>Southside House</h4>
+                    <p>Nottingham</p>
+                </div>
+                
+                <div class="location-card">
+                    <h4>Lawson House</h4>
+                    <p>Kettering</p>
+                </div>
+                
+                <div class="location-card">
+                    <h4>Haydon House</h4>
+                    <p>Chadwell Heath, Romford</p>
+                </div>
+                
+                <div class="location-card">
+                    <h4>Yellowpine House</h4>
+                    <p>Chigwell</p>
+                </div>
+                
+                <div class="location-card">
+                    <h4>Willowherb House</h4>
+                    <p>Romford</p>
+                </div>
+            </div>
+            
+            <p style="text-align: center; margin-top: 2rem; font-size: 0.9rem; color: var(--gray);">
+                ...plus additional properties, each tailored to young people's social and developmental needs.
+            </p>
+        </div>
+    </section>
+
+    <!-- Impact Section -->
+    <section id="impact" class="impact">
+        <div class="container">
+            <div class="section-title">
+                <h2>Why We Matter</h2>
+            </div>
+            
+            <p style="text-align: center; margin-bottom: 3rem; max-width: 800px; margin-left: auto; margin-right: auto;">
+                Young people in care often face disrupted education, complex trauma and limited opportunities. Blak Diamond's services are designed to make a meaningful difference.
+            </p>
+            
+            <div class="impact-list">
+                <div class="impact-item">
+                    <div class="impact-icon">
+                        <i class="fas fa-home"></i>
+                    </div>
+                    <h3>Stabilise living situations</h3>
+                    <p>Providing consistent, safe environments for vulnerable young people.</p>
+                </div>
+                
+                <div class="impact-item">
+                    <div class="impact-icon">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <h3>Improve emotional regulation</h3>
+                    <p>Helping young people develop coping strategies and build confidence.</p>
+                </div>
+                
+                <div class="impact-item">
+                    <div class="impact-icon">
+                        <i class="fas fa-life-ring"></i>
+                    </div>
+                    <h3>Equip with life skills</h3>
+                    <p>Teaching essential skills for independent living and personal responsibility.</p>
+                </div>
+                
+                <div class="impact-item">
+                    <div class="impact-icon">
+                        <i class="fas fa-chart-line-down"></i>
+                    </div>
+                    <h3>Reduce high-risk re-entry</h3>
+                    <p>Decreasing the likelihood of returning to higher-risk environments.</p>
+                </div>
+            </div>
+            
+            <p style="text-align: center; margin-top: 3rem; padding: 1.5rem; background: rgba(13, 59, 102, 0.05); border-radius: 8px;">
+                We work closely with commissioners, social workers, families and all stakeholders to improve outcomes every step of the way.
+            </p>
+        </div>
+    </section>
+
+    <!-- Footer & Contact -->
+    <footer id="contact">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>Blak Diamond Social Care Ltd</h3>
+                    <p>Transforming Lives. Supporting Youth. Building Independence.</p>
+                    <p style="margin-top: 1rem;">Registered Head Office: Romford, Essex, RM3 8BS</p>
+                    
+                    <div style="margin-top: 1.5rem;">
+                        <p><i class="fas fa-phone" style="margin-right: 10px;"></i> +44 (0)7491 237921</p>
+                        <p><i class="fas fa-phone" style="margin-right: 10px;"></i> +44 (0)7544 787579</p>
+                        <p><i class="fas fa-envelope" style="margin-right: 10px;"></i> info@blakdiamond.co.uk</p>
+                    </div>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="#about">Who We Are</a></li>
+                        <li><a href="#services">Our Services</a></li>
+                        <li><a href="#approach">Our Approach</a></li>
+                        <li><a href="#locations">Our Locations</a></li>
+                        <li><a href="#impact">Our Impact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Care Quality</h3>
+                    <p>Blak Diamond is registered with regulatory bodies, committed to meeting national care standards and subject to ongoing quality reviews. Our staff adhere to best-practice safeguarding and compliance frameworks.</p>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Get Involved</h3>
+                    <p>Make a referral. Explore placements. Or join the team.</p>
+                    <p style="margin-top: 1rem;">Blak Diamond welcomes enquiries from local authorities, families, advocacy groups and professionals dedicated to youth wellbeing.</p>
+                    
+                    <a href="mailto:info@blakdiamond.co.uk" style="display: inline-block; margin-top: 1.5rem; background: var(--secondary); color: var(--dark); padding: 0.8rem 1.5rem; border-radius: 5px; text-decoration: none; font-weight: 600; transition: var(--transition);">
+                        Contact Us Today
+                    </a>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; 2026 Blak Diamond Social Care Ltd. All rights reserved.</p>
+                <p style="margin-top: 0.5rem; font-size: 0.9rem;">Transforming Lives. Supporting Youth. Building Independence.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript for Interactive Elements -->
+    <script>
+        // Mobile Navigation Toggle
+        const mobileToggle = document.getElementById('mobileToggle');
+        const navLinks = document.getElementById('navLinks');
+        
+        mobileToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            mobileToggle.innerHTML = navLinks.classList.contains('active') 
+                ? '<i class="fas fa-times"></i>' 
+                : '<i class="fas fa-bars"></i>';
+        });
+        
+        // Close mobile menu when clicking a link
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+                mobileToggle.innerHTML = '<i class="fas fa-bars"></i>';
+            });
+        });
+        
+        // Scroll Animations
+        const fadeElements = document.querySelectorAll('.service-card, .approach-item, .location-card, .impact-item');
+        
+        const fadeInOnScroll = () => {
+            fadeElements.forEach(element => {
+                const elementTop = element.getBoundingClientRect().top;
+                const elementVisible = 150;
+                
+                if (elementTop < window.innerHeight - elementVisible) {
+                    element.classList.add('visible');
+                }
+            });
+        };
+        
+        // Check on load and scroll
+        window.addEventListener('scroll', fadeInOnScroll);
+        window.addEventListener('load', fadeInOnScroll);
+        
+        // Smooth Scrolling for Navigation Links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if(targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if(targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
