@@ -1,0 +1,882 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blak Diamond Social Care Ltd - Transforming Lives. Supporting Youth. Building Independence.</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #121212;
+            --secondary: #f8f9fa;
+            --accent: #2a6df5;
+            --accent-light: #4a8bf8;
+            --text: #333333;
+            --text-light: #666666;
+            --white: #ffffff;
+            --gray: #f0f0f0;
+            --border: #e0e0e0;
+            --shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            --radius: 12px;
+            --transition: all 0.3s ease;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: var(--text);
+            background-color: var(--white);
+            overflow-x: hidden;
+        }
+        
+        h1, h2, h3, h4, h5 {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 600;
+            line-height: 1.3;
+            margin-bottom: 1rem;
+        }
+        
+        h1 {
+            font-size: 3rem;
+            font-weight: 700;
+        }
+        
+        h2 {
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            position: relative;
+            display: inline-block;
+        }
+        
+        h2:after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            width: 60px;
+            height: 4px;
+            background-color: var(--accent);
+            border-radius: 2px;
+        }
+        
+        p {
+            margin-bottom: 1.5rem;
+            color: var(--text-light);
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        section {
+            padding: 80px 0;
+        }
+        
+        .section-light {
+            background-color: var(--gray);
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 14px 32px;
+            background-color: var(--accent);
+            color: var(--white);
+            border-radius: var(--radius);
+            font-weight: 600;
+            text-decoration: none;
+            border: none;
+            cursor: pointer;
+            transition: var(--transition);
+            font-size: 1rem;
+        }
+        
+        .btn:hover {
+            background-color: var(--primary);
+            transform: translateY(-3px);
+            box-shadow: var(--shadow);
+        }
+        
+        /* Header & Navigation */
+        .header-top {
+            background-color: var(--primary);
+            color: var(--white);
+            padding: 15px 0;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .contact-animation {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 30px;
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.02); }
+            100% { transform: scale(1); }
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .contact-icon {
+            color: var(--accent);
+            font-size: 1.2rem;
+        }
+        
+        .contact-number {
+            font-weight: 700;
+            font-size: 1.3rem;
+            letter-spacing: 0.5px;
+        }
+        
+        .header-main {
+            padding: 20px 0;
+            background-color: var(--white);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+        
+        .logo {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            line-height: 1;
+        }
+        
+        .logo-main {
+            font-family: 'Poppins', sans-serif;
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--primary);
+            letter-spacing: 1px;
+        }
+        
+        .logo-sub {
+            font-size: 0.9rem;
+            color: var(--text-light);
+            letter-spacing: 2px;
+            margin-top: 3px;
+        }
+        
+        .cqc-logo {
+            height: 60px;
+            width: auto;
+        }
+        
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+        }
+        
+        .nav-link {
+            text-decoration: none;
+            color: var(--text);
+            font-weight: 500;
+            font-size: 1.05rem;
+            position: relative;
+            padding: 5px 0;
+            transition: var(--transition);
+        }
+        
+        .nav-link:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--accent);
+            transition: var(--transition);
+        }
+        
+        .nav-link:hover {
+            color: var(--accent);
+        }
+        
+        .nav-link:hover:after {
+            width: 100%;
+        }
+        
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            color: var(--primary);
+            cursor: pointer;
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(18, 18, 18, 0.85), rgba(18, 18, 18, 0.9)), url('https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80');
+            background-size: cover;
+            background-position: center;
+            color: var(--white);
+            padding: 120px 0;
+            text-align: center;
+        }
+        
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1.5rem;
+            animation: fadeInUp 1s ease;
+        }
+        
+        .hero-tagline {
+            font-size: 1.8rem;
+            font-weight: 300;
+            margin-bottom: 2.5rem;
+            animation: fadeInUp 1s ease 0.2s both;
+        }
+        
+        .hero-address {
+            font-size: 1.2rem;
+            margin-bottom: 3rem;
+            animation: fadeInUp 1s ease 0.4s both;
+        }
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        /* Services Section */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .service-card {
+            background-color: var(--white);
+            border-radius: var(--radius);
+            padding: 30px;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            height: 100%;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
+        }
+        
+        .service-icon {
+            font-size: 2.5rem;
+            color: var(--accent);
+            margin-bottom: 20px;
+        }
+        
+        .service-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+        }
+        
+        /* Locations Section */
+        .locations-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 40px;
+        }
+        
+        .location-item {
+            background-color: var(--white);
+            border-radius: var(--radius);
+            padding: 20px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: var(--transition);
+        }
+        
+        .location-item:hover {
+            transform: translateY(-5px);
+        }
+        
+        .location-name {
+            font-weight: 600;
+            color: var(--accent);
+            margin-bottom: 5px;
+        }
+        
+        /* Approach Section */
+        .approach-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-top: 30px;
+        }
+        
+        .approach-item {
+            background-color: var(--white);
+            border-radius: var(--radius);
+            padding: 20px;
+            flex: 1 1 calc(50% - 20px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+        }
+        
+        .approach-icon {
+            color: var(--accent);
+            font-size: 1.5rem;
+            margin-top: 3px;
+        }
+        
+        /* CQC Section */
+        .cqc-section {
+            background-color: var(--primary);
+            color: var(--white);
+            text-align: center;
+        }
+        
+        .cqc-section h2 {
+            color: var(--white);
+        }
+        
+        .cqc-section h2:after {
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        
+        .cqc-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        /* Footer */
+        footer {
+            background-color: var(--primary);
+            color: var(--white);
+            padding: 80px 0 30px;
+        }
+        
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 50px;
+        }
+        
+        .footer-logo .logo-main {
+            color: var(--white);
+            font-size: 2.2rem;
+        }
+        
+        .footer-logo .logo-sub {
+            color: #aaa;
+        }
+        
+        .footer-heading {
+            font-size: 1.3rem;
+            margin-bottom: 20px;
+            position: relative;
+            padding-bottom: 10px;
+        }
+        
+        .footer-heading:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 40px;
+            height: 3px;
+            background-color: var(--accent);
+        }
+        
+        .footer-contact {
+            list-style: none;
+        }
+        
+        .footer-contact li {
+            margin-bottom: 15px;
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+        }
+        
+        .footer-contact i {
+            color: var(--accent);
+            margin-top: 4px;
+        }
+        
+        .copyright {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: #aaa;
+            font-size: 0.9rem;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 992px) {
+            h1 {
+                font-size: 2.5rem;
+            }
+            
+            h2 {
+                font-size: 2rem;
+            }
+            
+            .hero h1 {
+                font-size: 3rem;
+            }
+            
+            .hero-tagline {
+                font-size: 1.5rem;
+            }
+            
+            .nav-menu {
+                gap: 20px;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .header-top {
+                padding: 10px 0;
+            }
+            
+            .contact-animation {
+                flex-direction: column;
+                gap: 10px;
+                text-align: center;
+            }
+            
+            .contact-number {
+                font-size: 1.1rem;
+            }
+            
+            .mobile-menu-btn {
+                display: block;
+            }
+            
+            .nav-menu {
+                position: fixed;
+                top: 150px;
+                left: 0;
+                width: 100%;
+                background-color: var(--white);
+                flex-direction: column;
+                padding: 30px;
+                box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+                transform: translateY(-100%);
+                opacity: 0;
+                visibility: hidden;
+                transition: var(--transition);
+                z-index: 999;
+            }
+            
+            .nav-menu.active {
+                transform: translateY(0);
+                opacity: 1;
+                visibility: visible;
+            }
+            
+            .hero {
+                padding: 80px 0;
+            }
+            
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .hero-tagline {
+                font-size: 1.3rem;
+            }
+            
+            .approach-item {
+                flex: 1 1 100%;
+            }
+            
+            section {
+                padding: 60px 0;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .logo-container {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 10px;
+            }
+            
+            .cqc-logo {
+                height: 50px;
+            }
+            
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .hero-tagline {
+                font-size: 1.1rem;
+            }
+            
+            h2 {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header with Animated Contact Info -->
+    <div class="header-top">
+        <div class="container">
+            <div class="contact-animation">
+                <div class="contact-item">
+                    <span class="contact-icon"><i class="fas fa-phone"></i></span>
+                    <span class="contact-number">+44 (0)7491 237921</span>
+                </div>
+                <div class="contact-item">
+                    <span class="contact-icon"><i class="fas fa-phone"></i></span>
+                    <span class="contact-number">+44 (0)7544 787579</span>
+                </div>
+                <div class="contact-item">
+                    <span class="contact-icon"><i class="fas fa-envelope"></i></span>
+                    <span class="contact-number">info@blakdiamond.co.uk</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Main Header with Navigation -->
+    <header class="header-main">
+        <div class="container nav-container">
+            <div class="logo-container">
+                <div class="logo">
+                    <div class="logo-main">BLAK DIAMOND</div>
+                    <div class="logo-sub">SOCIAL CARE</div>
+                </div>
+                <!-- CQC Logo would be embedded here -->
+                <div class="cqc-logo-placeholder">
+                    <div style="background-color: #005eb8; color: white; padding: 10px 15px; border-radius: 5px; font-weight: 700; letter-spacing: 1px;">CQC Registered</div>
+                </div>
+            </div>
+            
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+            
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#about" class="nav-link">Who We Are</a></li>
+                <li><a href="#services" class="nav-link">What We Do</a></li>
+                <li><a href="#approach" class="nav-link">Our Approach</a></li>
+                <li><a href="#locations" class="nav-link">Our Locations</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+        </div>
+    </header>
+    
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container">
+            <h1>Transforming Lives. Supporting Youth. Building Independence.</h1>
+            <div class="hero-tagline">Specialist social care for young people aged 8–18</div>
+            <div class="hero-address">Registered Head Office: Romford, Essex, RM3 8BS</div>
+            <a href="#contact" class="btn">Get Involved</a>
+        </div>
+    </section>
+    
+    <!-- Who We Are Section -->
+    <section id="about">
+        <div class="container">
+            <h2>Who We Are</h2>
+            <p>Blak Diamond Social Care Ltd is a specialist social care provider focused on supporting young people aged 8–18, especially those transitioning through challenging circumstances toward semi-independent living. Our mission is to foster growth, resilience and self-sufficiency by delivering tailored, reliable care and accommodation solutions.</p>
+            <p>We operate with a youth-centred philosophy, blending clinical expertise with lived experience-informed practices to guide individuals toward meaningful independence. Our team is led by experienced social workers and care professionals with strong backgrounds in trauma, behavioural support and multi-agency collaboration.</p>
+        </div>
+    </section>
+    
+    <!-- What We Do Section -->
+    <section class="section-light" id="services">
+        <div class="container">
+            <h2>What We Do</h2>
+            <p>Blak Diamond delivers a comprehensive social care ecosystem spanning housing, support and clinical guidance for vulnerable young people. Our core services include:</p>
+            
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon"><i class="fas fa-home"></i></div>
+                    <h3>Supported Living Accommodation</h3>
+                    <p>Safe, structured housing options that combine residential care with skills-based support. Environments are designed for stability, learning and emotional growth.</p>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon"><i class="fas fa-user-shield"></i></div>
+                    <h3>Solo & High-Support Placements</h3>
+                    <p>Individualised placements for young people with significant behavioural or emotional needs—especially those transitioning from secure settings or under court orders.</p>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon"><i class="fas fa-hands-helping"></i></div>
+                    <h3>Personalised Care & Domiciliary Support</h3>
+                    <p>Care services adjusted to meet complex needs, delivered in both residential and home-based settings to promote comfort and continuity.</p>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon"><i class="fas fa-brain"></i></div>
+                    <h3>Behavioural Intervention & Developmental Support</h3>
+                    <p>Specialised strategies to manage challenging behaviours while building life skills, social functioning and personal responsibility.</p>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon"><i class="fas fa-graduation-cap"></i></div>
+                    <h3>Staff Training & Development Programs</h3>
+                    <p>Continuous professional development ensures our staff deliver care that is safe, evidence-led, responsive and compassionate.</p>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon"><i class="fas fa-exchange-alt"></i></div>
+                    <h3>Referral & Transition Support</h3>
+                    <p>Collaborative work with local authorities, families, educators and health professionals to create smooth transitional pathways out of care.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Our Approach Section -->
+    <section id="approach">
+        <div class="container">
+            <h2>Our Approach</h2>
+            <p>At Blak Diamond, every young person's support plan is individualised, culturally sensitive and outcome-focused. We reject one-size-fits-all care. Instead, we invest in meaningful relationships that open doors to future opportunities.</p>
+            
+            <div class="approach-list">
+                <div class="approach-item">
+                    <div class="approach-icon"><i class="fas fa-chart-line"></i></div>
+                    <div>
+                        <h3>Strength-based planning</h3>
+                        <p>Building on each young person's unique strengths and capabilities.</p>
+                    </div>
+                </div>
+                
+                <div class="approach-item">
+                    <div class="approach-icon"><i class="fas fa-heart"></i></div>
+                    <div>
+                        <h3>Holistic wellbeing support</h3>
+                        <p>Addressing physical, emotional, social, and educational needs.</p>
+                    </div>
+                </div>
+                
+                <div class="approach-item">
+                    <div class="approach-icon"><i class="fas fa-bullseye"></i></div>
+                    <div>
+                        <h3>Clear progression goals</h3>
+                        <p>Setting measurable objectives for development and independence.</p>
+                    </div>
+                </div>
+                
+                <div class="approach-item">
+                    <div class="approach-icon"><i class="fas fa-shield-alt"></i></div>
+                    <div>
+                        <h3>Safety, dignity and respect</h3>
+                        <p>Creating environments where young people feel secure and valued.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Locations Section -->
+    <section class="section-light" id="locations">
+        <div class="container">
+            <h2>Places We Deliver Support</h2>
+            <p>We operate a network of homes across multiple locations, each set up to feel like a stable, nurturing household with access to amenities, transport links and community spaces.</p>
+            
+            <div class="locations-grid">
+                <div class="location-item">
+                    <div class="location-name">Springhill House</div>
+                    <div class="location-place">Northamptonshire</div>
+                </div>
+                
+                <div class="location-item">
+                    <div class="location-name">Southside House</div>
+                    <div class="location-place">Nottingham</div>
+                </div>
+                
+                <div class="location-item">
+                    <div class="location-name">Lawson House</div>
+                    <div class="location-place">Kettering</div>
+                </div>
+                
+                <div class="location-item">
+                    <div class="location-name">Haydon House</div>
+                    <div class="location-place">Chadwell Heath, Romford</div>
+                </div>
+                
+                <div class="location-item">
+                    <div class="location-name">Yellowpine House</div>
+                    <div class="location-place">Chigwell</div>
+                </div>
+                
+                <div class="location-item">
+                    <div class="location-name">Willowherb House</div>
+                    <div class="location-place">Romford</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- CQC Section -->
+    <section class="cqc-section">
+        <div class="container">
+            <div class="cqc-content">
+                <h2>Care Quality and Standards</h2>
+                <p>Blak Diamond is registered with regulatory bodies, committed to meeting national care standards and subject to ongoing quality reviews. Our staff adhere to best-practice safeguarding and compliance frameworks.</p>
+                <p>We work closely with commissioners, social workers, families and all stakeholders to improve outcomes every step of the way.</p>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer with Contact -->
+    <footer id="contact">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div class="footer-logo">
+                        <div class="logo-main">BLAK DIAMOND</div>
+                        <div class="logo-sub">SOCIAL CARE LTD</div>
+                    </div>
+                    <p style="margin-top: 20px; color: #aaa;">Transforming Lives. Supporting Youth. Building Independence.</p>
+                </div>
+                
+                <div class="footer-col">
+                    <h3 class="footer-heading">Contact Us</h3>
+                    <ul class="footer-contact">
+                        <li>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Registered Head Office:<br>Romford, Essex, RM3 8BS</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-phone"></i>
+                            <span>+44 (0)7491 237921<br>+44 (0)7544 787579</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-envelope"></i>
+                            <span>info@blakdiamond.co.uk</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h3 class="footer-heading">Get Involved</h3>
+                    <p style="color: #aaa;">Make a referral. Explore placements. Or join the team.</p>
+                    <p style="color: #aaa; margin-top: 20px;">Blak Diamond welcomes enquiries from local authorities, families, advocacy groups and professionals dedicated to youth wellbeing.</p>
+                    <a href="mailto:info@blakdiamond.co.uk" class="btn" style="margin-top: 20px;">Contact Us</a>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; 2023 Blak Diamond Social Care Ltd. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const navMenu = document.getElementById('navMenu');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+            mobileMenuBtn.innerHTML = navMenu.classList.contains('active') 
+                ? '<i class="fas fa-times"></i>' 
+                : '<i class="fas fa-bars"></i>';
+        });
+        
+        // Close mobile menu when clicking on a link
+        const navLinks = document.querySelectorAll('.nav-link');
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                navMenu.classList.remove('active');
+                mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
+            });
+        });
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if(targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if(targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 100,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+        
+        // Add animation to elements when scrolling into view
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if(entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+        
+        // Observe elements for animation
+        document.querySelectorAll('.service-card, .approach-item, .location-item').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(20px)';
+            el.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>
