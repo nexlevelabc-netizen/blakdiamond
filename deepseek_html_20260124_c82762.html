@@ -1,0 +1,1707 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blak Diamond Social Care Ltd - Transforming Lives</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* CSS Variables */
+        :root {
+            --primary: #0d3b66;
+            --secondary: #f4a261;
+            --accent: #2a9d8f;
+            --dark: #1a1a2e;
+            --light: #f8f9fa;
+            --gray: #6c757d;
+            --light-gray: #e9ecef;
+            --shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            --transition: all 0.3s ease;
+        }
+
+        /* Reset & Base */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: var(--light);
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4, h5 {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: 1rem;
+            color: var(--primary);
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        section {
+            padding: 80px 0;
+            opacity: 1;
+            transition: opacity 0.5s ease;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 3rem;
+            position: relative;
+        }
+
+        .section-title:after {
+            content: '';
+            position: absolute;
+            width: 80px;
+            height: 4px;
+            background: var(--secondary);
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            border-radius: 2px;
+        }
+
+        /* Page Sections */
+        .page-section {
+            display: block;
+            min-height: 100vh;
+            padding-top: 140px;
+        }
+
+        .page-section.hidden {
+            display: none;
+        }
+
+        /* Animated Contact Header */
+        .contact-header {
+            background: linear-gradient(135deg, var(--primary) 0%, #1a5276 100%);
+            color: white;
+            padding: 12px 0;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            animation: slideDown 0.8s ease-out;
+        }
+
+        @keyframes slideDown {
+            from { transform: translateY(-100%); }
+            to { transform: translateY(0); }
+        }
+
+        .contact-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .contact-info {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.95rem;
+        }
+
+        .phone-numbers {
+            display: flex;
+            gap: 20px;
+        }
+
+        .phone-number {
+            font-weight: 800;
+            font-size: 1.1rem;
+            color: white;
+            text-decoration: none;
+            position: relative;
+            padding: 5px 10px;
+            border-radius: 4px;
+            background: rgba(255, 255, 255, 0.1);
+            transition: var(--transition);
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% { box-shadow: 0 0 0 0 rgba(244, 162, 97, 0.7); }
+            70% { box-shadow: 0 0 0 8px rgba(244, 162, 97, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(244, 162, 97, 0); }
+        }
+
+        .phone-number:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: translateY(-2px);
+        }
+
+        /* Main Navigation - Fixed */
+        .main-nav {
+            background: white;
+            box-shadow: var(--shadow);
+            position: fixed;
+            top: 60px;
+            width: 100%;
+            z-index: 999;
+            transition: var(--transition);
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 0;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            cursor: pointer;
+        }
+
+        .logo-img {
+            height: 50px;
+            width: auto;
+        }
+
+        .logo-text {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: var(--primary);
+        }
+
+        .logo-text span {
+            color: var(--secondary);
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--dark);
+            font-weight: 600;
+            font-size: 1rem;
+            padding: 8px 0;
+            position: relative;
+            transition: var(--transition);
+            cursor: pointer;
+        }
+
+        .nav-links a:after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 3px;
+            background: var(--secondary);
+            bottom: 0;
+            left: 0;
+            transition: width 0.3s ease;
+        }
+
+        .nav-links a:hover,
+        .nav-links a.active {
+            color: var(--primary);
+        }
+
+        .nav-links a.active:after,
+        .nav-links a:hover:after {
+            width: 100%;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(13, 59, 102, 0.85), rgba(26, 26, 46, 0.9)), url('https://images.unsplash.com/photo-1512956701326-f6c6f86c40d7?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-align: center;
+            padding: 180px 0 100px;
+            margin-top: 120px;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+        }
+
+        .hero-content {
+            width: 100%;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            color: white;
+            margin-bottom: 1.5rem;
+            animation: fadeInUp 1s ease-out;
+        }
+
+        .hero-subtitle {
+            font-size: 1.8rem;
+            font-weight: 300;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+            animation: fadeInUp 1s ease-out 0.2s both;
+        }
+
+        .hero-tagline {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto 3rem;
+            line-height: 1.6;
+            animation: fadeInUp 1s ease-out 0.4s both;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Content Sections */
+        .content-section {
+            background: white;
+        }
+
+        .section-intro {
+            font-size: 1.2rem;
+            max-width: 900px;
+            margin: 0 auto 3rem;
+            text-align: center;
+            color: var(--gray);
+        }
+
+        /* Services Grid */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .service-card {
+            background: white;
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            border-top: 4px solid var(--accent);
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+        }
+
+        .service-icon {
+            font-size: 2.5rem;
+            color: var(--secondary);
+            margin-bottom: 20px;
+        }
+
+        .service-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+        }
+
+        /* Houses Section */
+        .houses-section {
+            background: var(--light-gray);
+        }
+
+        .houses-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .house-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+
+        .house-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+        }
+
+        .house-img {
+            height: 200px;
+            background: linear-gradient(135deg, var(--primary) 0%, #1a5276 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 3rem;
+        }
+
+        .house-content {
+            padding: 25px;
+        }
+
+        .house-content h3 {
+            color: var(--primary);
+            font-size: 1.4rem;
+            margin-bottom: 10px;
+        }
+
+        .house-location {
+            color: var(--secondary);
+            font-weight: 600;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        /* Approach List */
+        .approach-list {
+            list-style: none;
+            max-width: 800px;
+            margin: 40px auto 0;
+        }
+
+        .approach-list li {
+            padding: 15px 0 15px 40px;
+            position: relative;
+            font-size: 1.1rem;
+            border-bottom: 1px solid var(--light-gray);
+        }
+
+        .approach-list li:before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            top: 15px;
+            width: 25px;
+            height: 25px;
+            background: var(--accent);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+        }
+
+        /* CQC Section */
+        .cqc-section {
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            text-align: center;
+        }
+
+        .cqc-logo {
+            max-width: 200px;
+            margin: 30px auto;
+            display: block;
+        }
+
+        /* Message Us Page */
+        .message-us-section {
+            background: white;
+            min-height: 100vh;
+            padding-top: 140px;
+        }
+
+        .contact-form-container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 50px;
+            border-radius: 15px;
+            box-shadow: var(--shadow);
+        }
+
+        .form-group {
+            margin-bottom: 25px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: var(--primary);
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 12px 15px;
+            border: 2px solid var(--light-gray);
+            border-radius: 8px;
+            font-family: 'Inter', sans-serif;
+            font-size: 1rem;
+            transition: var(--transition);
+        }
+
+        .form-control:focus {
+            outline: none;
+            border-color: var(--secondary);
+            box-shadow: 0 0 0 3px rgba(244, 162, 97, 0.2);
+        }
+
+        textarea.form-control {
+            min-height: 150px;
+            resize: vertical;
+        }
+
+        .btn {
+            background: linear-gradient(135deg, var(--primary) 0%, #1a5276 100%);
+            color: white;
+            border: none;
+            padding: 15px 40px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: var(--transition);
+            display: inline-block;
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(13, 59, 102, 0.2);
+        }
+
+        /* Contact Cards */
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-top: 40px;
+        }
+
+        .contact-card {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 30px;
+            border-radius: 10px;
+            text-align: center;
+            transition: var(--transition);
+        }
+
+        .contact-card:hover {
+            background: rgba(255, 255, 255, 0.1);
+            transform: translateY(-5px);
+        }
+
+        .contact-icon {
+            font-size: 2.5rem;
+            color: var(--secondary);
+            margin-bottom: 20px;
+        }
+
+        .contact-card h3 {
+            color: var(--primary);
+            margin-bottom: 15px;
+        }
+
+        /* Footer Contact Section */
+        .footer-contact {
+            background: var(--dark);
+            color: white;
+            padding: 80px 0 40px;
+            min-height: 100vh;
+            padding-top: 140px;
+        }
+
+        .footer-contact .section-title {
+            color: white;
+        }
+
+        .footer-contact .section-title:after {
+            background: var(--secondary);
+        }
+
+        .footer-contact .contact-card h3 {
+            color: white;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 40px;
+            margin-top: 40px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 0.9rem;
+        }
+
+        /* Houses Navigation */
+        .houses-nav {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin: 30px 0;
+            flex-wrap: wrap;
+        }
+
+        .house-nav-btn {
+            padding: 8px 20px;
+            background: white;
+            border: 2px solid var(--light-gray);
+            border-radius: 30px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .house-nav-btn:hover,
+        .house-nav-btn.active {
+            background: var(--primary);
+            color: white;
+            border-color: var(--primary);
+        }
+
+        /* AI Chatbot Styles */
+        .chatbot-container {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            z-index: 1001;
+            width: 380px;
+            max-width: 90vw;
+        }
+
+        .chatbot-toggle {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, var(--primary) 0%, #1a5276 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 24px;
+            cursor: pointer;
+            box-shadow: 0 5px 20px rgba(13, 59, 102, 0.3);
+            transition: var(--transition);
+            margin-left: auto;
+        }
+
+        .chatbot-toggle:hover {
+            transform: scale(1.1);
+            box-shadow: 0 8px 25px rgba(13, 59, 102, 0.4);
+        }
+
+        .chatbot-window {
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+            overflow: hidden;
+            display: none;
+            height: 500px;
+            flex-direction: column;
+            margin-bottom: 15px;
+        }
+
+        .chatbot-window.active {
+            display: flex;
+            animation: slideUp 0.3s ease;
+        }
+
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .chatbot-header {
+            background: linear-gradient(135deg, var(--primary) 0%, #1a5276 100%);
+            color: white;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .chatbot-header h3 {
+            color: white;
+            margin: 0;
+            font-size: 1.2rem;
+        }
+
+        .chatbot-close {
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .chatbot-close:hover {
+            transform: scale(1.2);
+        }
+
+        .chatbot-messages {
+            flex: 1;
+            padding: 20px;
+            overflow-y: auto;
+            background: var(--light);
+        }
+
+        .message {
+            margin-bottom: 15px;
+            display: flex;
+            animation: fadeIn 0.3s ease;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .message.bot {
+            justify-content: flex-start;
+        }
+
+        .message.user {
+            justify-content: flex-end;
+        }
+
+        .message-content {
+            max-width: 80%;
+            padding: 12px 16px;
+            border-radius: 18px;
+            font-size: 0.95rem;
+            line-height: 1.4;
+        }
+
+        .message.bot .message-content {
+            background: white;
+            color: #333;
+            border: 1px solid var(--light-gray);
+            border-bottom-left-radius: 5px;
+        }
+
+        .message.user .message-content {
+            background: linear-gradient(135deg, var(--primary) 0%, #1a5276 100%);
+            color: white;
+            border-bottom-right-radius: 5px;
+        }
+
+        .chatbot-input-area {
+            padding: 20px;
+            background: white;
+            border-top: 1px solid var(--light-gray);
+            display: flex;
+            gap: 10px;
+        }
+
+        .chatbot-input {
+            flex: 1;
+            padding: 12px 15px;
+            border: 2px solid var(--light-gray);
+            border-radius: 25px;
+            font-family: 'Inter', sans-serif;
+            font-size: 0.95rem;
+            transition: var(--transition);
+        }
+
+        .chatbot-input:focus {
+            outline: none;
+            border-color: var(--secondary);
+        }
+
+        .chatbot-voice-btn {
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            background: var(--secondary);
+            color: white;
+            border: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .chatbot-voice-btn:hover {
+            background: #e6893e;
+            transform: scale(1.05);
+        }
+
+        .chatbot-voice-btn.listening {
+            background: #e74c3c;
+            animation: pulse 1.5s infinite;
+        }
+
+        .voice-indicator {
+            position: absolute;
+            top: -40px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: rgba(231, 76, 60, 0.9);
+            color: white;
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            display: none;
+        }
+
+        .voice-indicator.active {
+            display: block;
+            animation: fadeIn 0.3s ease;
+        }
+
+        .quick-questions {
+            padding: 15px 20px;
+            background: var(--light-gray);
+            border-top: 1px solid #ddd;
+        }
+
+        .quick-questions h4 {
+            font-size: 0.9rem;
+            color: var(--gray);
+            margin-bottom: 10px;
+        }
+
+        .question-chips {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .question-chip {
+            background: white;
+            border: 1px solid var(--light-gray);
+            border-radius: 20px;
+            padding: 8px 15px;
+            font-size: 0.85rem;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .question-chip:hover {
+            background: var(--primary);
+            color: white;
+            border-color: var(--primary);
+        }
+
+        /* Back to Top Button */
+        .back-to-top {
+            position: fixed;
+            bottom: 100px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            background: var(--primary);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            cursor: pointer;
+            opacity: 0;
+            visibility: hidden;
+            transition: var(--transition);
+            z-index: 999;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .back-to-top.visible {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .back-to-top:hover {
+            background: var(--secondary);
+            transform: translateY(-5px);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 992px) {
+            .hero h1 {
+                font-size: 2.8rem;
+            }
+            
+            .section-title {
+                font-size: 2.2rem;
+            }
+            
+            .contact-info {
+                flex-direction: column;
+                gap: 10px;
+                text-align: center;
+            }
+            
+            .phone-numbers {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .houses-grid {
+                grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            }
+            
+            .chatbot-container {
+                right: 20px;
+                bottom: 20px;
+                width: 350px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .main-nav {
+                top: 100px;
+            }
+            
+            .hero, .message-us-section, .footer-contact {
+                padding: 150px 0 80px;
+                margin-top: 160px;
+            }
+            
+            .nav-container {
+                flex-direction: column;
+                gap: 15px;
+            }
+            
+            .nav-links {
+                gap: 15px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            
+            .houses-grid,
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .contact-form-container {
+                padding: 30px 20px;
+            }
+            
+            .chatbot-container {
+                width: 320px;
+                right: 10px;
+                bottom: 10px;
+            }
+            
+            .chatbot-window {
+                height: 450px;
+            }
+            
+            .back-to-top {
+                bottom: 80px;
+                right: 20px;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+            
+            .hero-subtitle {
+                font-size: 1.4rem;
+            }
+            
+            section {
+                padding: 60px 0;
+            }
+
+            .houses-nav {
+                gap: 10px;
+            }
+
+            .house-nav-btn {
+                padding: 6px 15px;
+                font-size: 0.9rem;
+            }
+            
+            .chatbot-container {
+                width: 95vw;
+                right: 2.5vw;
+                bottom: 10px;
+            }
+            
+            .chatbot-toggle {
+                width: 55px;
+                height: 55px;
+                font-size: 22px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Animated Contact Header -->
+    <header class="contact-header">
+        <div class="container contact-container">
+            <div class="contact-info">
+                <div class="contact-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>Romford, Essex, RM3 8BS</span>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <span>info@blakdiamond.co.uk</span>
+                </div>
+            </div>
+            <div class="phone-numbers">
+                <a href="tel:+447491237921" class="phone-number">
+                    <i class="fas fa-phone"></i> +44 (0)7491 237921
+                </a>
+                <a href="tel:+447544787579" class="phone-number">
+                    <i class="fas fa-phone"></i> +44 (0)7544 787579
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Navigation -->
+    <nav class="main-nav">
+        <div class="container nav-container">
+            <div class="logo" onclick="showSection('home')">
+                <!-- Company Logo Placeholder -->
+                <div class="logo-img" style="background: var(--primary); color: white; display: flex; align-items: center; justify-content: center; border-radius: 8px; width: 50px; height: 50px; font-weight: bold;">BD</div>
+                <div class="logo-text">Blak<span>Diamond</span></div>
+            </div>
+            <ul class="nav-links">
+                <li><a class="nav-link active" onclick="showSection('home')">Home</a></li>
+                <li><a class="nav-link" onclick="showSection('about')">Who We Are</a></li>
+                <li><a class="nav-link" onclick="showSection('services')">What We Do</a></li>
+                <li><a class="nav-link" onclick="showSection('houses')">Our Houses</a></li>
+                <li><a class="nav-link" onclick="showSection('message')">Message Us</a></li>
+                <li><a class="nav-link" onclick="showSection('contact')">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Home Section -->
+    <section id="home" class="page-section hero">
+        <div class="container hero-content">
+            <h1>Blak Diamond Social Care Ltd</h1>
+            <div class="hero-subtitle">Transforming Lives. Supporting Youth. Building Independence.</div>
+            <p class="hero-tagline">A specialist social care provider focused on supporting young people aged 8–18, especially those transitioning through challenging circumstances toward semi-independent living.</p>
+            <button class="btn" onclick="showSection('message')">
+                <i class="fas fa-comment-alt"></i> Send Us a Message
+            </button>
+        </div>
+    </section>
+
+    <!-- Who We Are Section -->
+    <section id="about" class="page-section content-section hidden">
+        <div class="container">
+            <h2 class="section-title">Who We Are</h2>
+            <p class="section-intro">Blak Diamond Social Care Ltd is a specialist social care provider focused on supporting young people aged 8–18, especially those transitioning through challenging circumstances toward semi-independent living.</p>
+            
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <h3>Our Mission</h3>
+                    <p>To foster growth, resilience and self-sufficiency by delivering tailored, reliable care and accommodation solutions.</p>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Our Philosophy</h3>
+                    <p>We operate with a youth-centred philosophy, blending clinical expertise with lived experience-informed practices to guide individuals toward meaningful independence.</p>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3>Our Team</h3>
+                    <p>Led by experienced social workers and care professionals with strong backgrounds in trauma, behavioural support and multi-agency collaboration.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- What We Do Section -->
+    <section id="services" class="page-section content-section hidden" style="background: var(--light-gray);">
+        <div class="container">
+            <h2 class="section-title">What We Do</h2>
+            <p class="section-intro">Blak Diamond delivers a comprehensive social care ecosystem spanning housing, support and clinical guidance for vulnerable young people.</p>
+            
+            <div class="services-grid">
+                <div class="service-card">
+                    <h3>Supported Living Accommodation</h3>
+                    <p>Safe, structured housing options that combine residential care with skills-based support. Environments are designed for stability, learning and emotional growth.</p>
+                </div>
+                
+                <div class="service-card">
+                    <h3>Solo & High-Support Placements</h3>
+                    <p>Individualised placements for young people with significant behavioural or emotional needs—especially those transitioning from secure settings or under court orders.</p>
+                </div>
+                
+                <div class="service-card">
+                    <h3>Personalised Care & Domiciliary Support</h3>
+                    <p>Care services adjusted to meet complex needs, delivered in both residential and home-based settings to promote comfort and continuity.</p>
+                </div>
+                
+                <div class="service-card">
+                    <h3>Behavioural Intervention & Developmental Support</h3>
+                    <p>Specialised strategies to manage challenging behaviours while building life skills, social functioning and personal responsibility.</p>
+                </div>
+                
+                <div class="service-card">
+                    <h3>Staff Training & Development Programs</h3>
+                    <p>Continuous professional development ensures our staff deliver care that is safe, evidence-led, responsive and compassionate.</p>
+                </div>
+                
+                <div class="service-card">
+                    <h3>Referral & Transition Support</h3>
+                    <p>Collaborative work with local authorities, families, educators and health professionals to create smooth transitional pathways out of care.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Houses Section -->
+    <section id="houses" class="page-section houses-section hidden">
+        <div class="container">
+            <h2 class="section-title">Our Support Locations</h2>
+            <p class="section-intro">We operate 13 homes across multiple locations, each set up to feel like a stable, nurturing household with access to amenities, transport links and community spaces.</p>
+            
+            <!-- Houses Navigation -->
+            <div class="houses-nav">
+                <button class="house-nav-btn active" onclick="filterHouses('all')">All Locations</button>
+                <button class="house-nav-btn" onclick="filterHouses('Northamptonshire')">Northamptonshire</button>
+                <button class="house-nav-btn" onclick="filterHouses('Nottingham')">Nottingham</button>
+                <button class="house-nav-btn" onclick="filterHouses('Romford')">Romford</button>
+                <button class="house-nav-btn" onclick="filterHouses('Surrey')">Surrey</button>
+                <button class="house-nav-btn" onclick="filterHouses('Chigwell')">Chigwell</button>
+                <button class="house-nav-btn" onclick="filterHouses('Corby')">Corby</button>
+            </div>
+            
+            <div class="houses-grid" id="houses-container">
+                <!-- Houses will be dynamically loaded here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Message Us Section -->
+    <section id="message" class="page-section message-us-section hidden">
+        <div class="container">
+            <h2 class="section-title">Message Us</h2>
+            <p class="section-intro">Send us a message and we'll get back to you as soon as possible. Whether you're making a referral, exploring placements, or interested in joining our team, we're here to help.</p>
+            
+            <div class="contact-form-container">
+                <form id="messageForm">
+                    <div class="form-group">
+                        <label for="name">Full Name *</label>
+                        <input type="text" id="name" class="form-control" required placeholder="Enter your full name">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Email Address *</label>
+                        <input type="email" id="email" class="form-control" required placeholder="Enter your email address">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" class="form-control" placeholder="Enter your phone number">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="subject">Subject *</label>
+                        <select id="subject" class="form-control" required>
+                            <option value="">Select a subject</option>
+                            <option value="referral">Make a Referral</option>
+                            <option value="placement">Explore Placements</option>
+                            <option value="careers">Careers & Employment</option>
+                            <option value="general">General Enquiry</option>
+                            <option value="feedback">Feedback</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message">Your Message *</label>
+                        <textarea id="message" class="form-control" required placeholder="Please provide details about your enquiry..."></textarea>
+                    </div>
+                    
+                    <div class="form-group" style="text-align: center;">
+                        <button type="submit" class="btn">
+                            <i class="fas fa-paper-plane"></i> Send Message
+                        </button>
+                    </div>
+                </form>
+            </div>
+            
+            <div class="contact-grid" style="margin-top: 60px;">
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fas fa-phone-volume"></i>
+                    </div>
+                    <h3>Call Us Directly</h3>
+                    <p style="font-weight: 700; font-size: 1.3rem; margin: 10px 0;">+44 (0)7491 237921</p>
+                    <p style="font-weight: 700; font-size: 1.3rem;">+44 (0)7544 787579</p>
+                </div>
+                
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fas fa-envelope-open-text"></i>
+                    </div>
+                    <h3>Email Us</h3>
+                    <p>For general enquiries:</p>
+                    <p style="font-weight: 700; font-size: 1.2rem; margin-top: 15px;">info@blakdiamond.co.uk</p>
+                    <p style="margin-top: 10px;">For careers:</p>
+                    <p style="font-weight: 700; font-size: 1.2rem;">careers@blakdiamond.co.uk</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="page-section footer-contact hidden">
+        <div class="container">
+            <h2 class="section-title">Get Involved</h2>
+            <p style="text-align: center; color: rgba(255,255,255,0.8); font-size: 1.2rem; max-width: 700px; margin: 0 auto 50px;">
+                Make a referral. Explore placements. Or join the team.<br>
+                Blak Diamond welcomes enquiries from local authorities, families, advocacy groups and professionals dedicated to youth wellbeing.
+            </p>
+            
+            <div class="contact-grid">
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fas fa-phone-volume"></i>
+                    </div>
+                    <h3>Call Us</h3>
+                    <p style="margin-bottom: 15px;">Speak directly with our care team:</p>
+                    <p style="font-weight: 700; font-size: 1.3rem; margin: 10px 0;">+44 (0)7491 237921</p>
+                    <p style="font-weight: 700; font-size: 1.3rem;">+44 (0)7544 787579</p>
+                </div>
+                
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fas fa-envelope-open-text"></i>
+                    </div>
+                    <h3>Email Us</h3>
+                    <p>Send us an email for general enquiries or referrals:</p>
+                    <p style="font-weight: 700; font-size: 1.2rem; margin-top: 15px;">info@blakdiamond.co.uk</p>
+                    <p style="margin-top: 10px;">For career opportunities:</p>
+                    <p style="font-weight: 700; font-size: 1.2rem;">careers@blakdiamond.co.uk</p>
+                </div>
+                
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fas fa-map-marked-alt"></i>
+                    </div>
+                    <h3>Visit Us</h3>
+                    <p>Registered Head Office:</p>
+                    <p style="font-weight: 700; margin-top: 15px;">Romford, Essex, RM3 8BS</p>
+                </div>
+                
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <h3>Careers</h3>
+                    <p>Join our team of dedicated professionals making a difference in young people's lives.</p>
+                    <p style="font-weight: 600; margin-top: 15px;">Send your CV to: careers@blakdiamond.co.uk</p>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2026 Blak Diamond Social Care Ltd. All rights reserved.</p>
+                <p style="margin-top: 10px;">Transforming Lives. Supporting Youth. Building Independence.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- AI Chatbot -->
+    <div class="chatbot-container">
+        <div class="chatbot-window" id="chatbotWindow">
+            <div class="chatbot-header">
+                <h3><i class="fas fa-robot"></i> Blak Diamond Assistant</h3>
+                <button class="chatbot-close" onclick="toggleChatbot()">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            
+            <div class="chatbot-messages" id="chatMessages">
+                <div class="message bot">
+                    <div class="message-content">
+                        Hello! I'm your Blak Diamond assistant. I can help you with information about our services, houses, referrals, and more. How can I assist you today?
+                    </div>
+                </div>
+                <div class="message bot">
+                    <div class="message-content">
+                        You can ask me questions like:
+                        <ul style="margin-top: 10px; padding-left: 20px;">
+                            <li>What services do you offer?</li>
+                            <li>Tell me about your houses</li>
+                            <li>How do I make a referral?</li>
+                            <li>What ages do you support?</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="quick-questions">
+                <h4>Quick Questions:</h4>
+                <div class="question-chips">
+                    <div class="question-chip" onclick="askQuickQuestion('services')">Our Services</div>
+                    <div class="question-chip" onclick="askQuickQuestion('houses')">Our Houses</div>
+                    <div class="question-chip" onclick="askQuickQuestion('referral')">Make Referral</div>
+                    <div class="question-chip" onclick="askQuickQuestion('contact')">Contact Info</div>
+                </div>
+            </div>
+            
+            <div class="chatbot-input-area">
+                <input type="text" class="chatbot-input" id="chatInput" placeholder="Type your question here..." onkeypress="handleChatInput(event)">
+                <button class="chatbot-voice-btn" id="voiceBtn" onclick="toggleVoiceRecognition()">
+                    <i class="fas fa-microphone"></i>
+                </button>
+                <div class="voice-indicator" id="voiceIndicator">Listening... Speak now</div>
+            </div>
+        </div>
+        
+        <div class="chatbot-toggle" onclick="toggleChatbot()">
+            <i class="fas fa-robot"></i>
+        </div>
+    </div>
+
+    <!-- Back to Top Button -->
+    <div class="back-to-top" id="backToTop" onclick="scrollToTop()">
+        <i class="fas fa-arrow-up"></i>
+    </div>
+
+    <script>
+        // Navigation System
+        function showSection(sectionId) {
+            // Hide all sections
+            document.querySelectorAll('.page-section').forEach(section => {
+                section.classList.add('hidden');
+            });
+            
+            // Show selected section
+            document.getElementById(sectionId).classList.remove('hidden');
+            
+            // Update navigation links
+            document.querySelectorAll('.nav-link').forEach(link => {
+                link.classList.remove('active');
+                if (link.textContent.trim().toLowerCase().includes(sectionId.toLowerCase()) || 
+                    (sectionId === 'home' && link.textContent.trim() === 'Home')) {
+                    link.classList.add('active');
+                }
+            });
+            
+            // Scroll to top of the section
+            window.scrollTo(0, 0);
+            
+            // Load houses if on houses page
+            if (sectionId === 'houses') {
+                loadHouses();
+            }
+        }
+
+        // Houses Data
+        const houses = [
+            {
+                name: "Springhill House",
+                location: "Northamptonshire",
+                description: "Newly refurbished grade II building residential children's home located opposite Northampton Hospital, offering a safe, nurturing, and supportive environment.",
+                features: ["3 children's bedrooms", "2 staff rooms", "Indoor cinema room", "Direct hospital access", "Local parks nearby"]
+            },
+            {
+                name: "Southside House",
+                location: "Nottingham",
+                description: "Pleasant, gated family sized home in Clifton with three bedrooms, large lounge, separate kitchen and dining room, and garden.",
+                features: ["Gated property", "3 bedrooms", "Large garden", "5-min walk to local centre", "Leisure centre nearby"]
+            },
+            {
+                name: "Lawson House",
+                location: "Northamptonshire",
+                description: "Pleasant family sized home in Kettering with three bedrooms, large lounge, separate kitchen and dining room, garden to both front and rear.",
+                features: ["3 bedrooms", "Front & rear garden", "Near town centre", "Quiet residential area", "Park nearby"]
+            },
+            {
+                name: "Haydon House",
+                location: "Romford",
+                description: "Pleasant family sized home in Chadwell Heath, Romford area with three bedrooms, large lounge/diner, separate kitchen, garden to both front and rear.",
+                features: ["3 bedrooms", "Lounge/diner", "Bus access to mall", "Ten-min drive to station", "Park nearby"]
+            },
+            {
+                name: "Henbane House",
+                location: "Romford",
+                description: "Three-bedroom terraced house situated in the Heaton Ward of Havering local authority, with convenient healthcare and educational facilities nearby.",
+                features: ["3 bedrooms", "Terraced house", "Healthcare nearby", "Educational facilities", "Designated playground"]
+            },
+            {
+                name: "Heathfields House",
+                location: "Surrey",
+                description: "Pleasant family sized home in Ashtead, Surrey with three bedrooms, large lounge/diner, separate kitchen, garden to both front and rear.",
+                features: ["3 bedrooms", "Near nature reserves", "Ashtead Common nearby", "Ten-min drive to station", "Front & rear garden"]
+            },
+            {
+                name: "Oakland House",
+                location: "Northamptonshire",
+                description: "Victorian House in Kettering with four bedrooms, separate kitchen, dining, and lounge area. Large garden at the back and located opposite a park.",
+                features: ["4 bedrooms", "Victorian house", "Large garden", "Opposite park", "Close to schools"]
+            },
+            {
+                name: "Yellowpine House",
+                location: "Chigwell",
+                description: "Pleasant family sized home in Chigwell with two bedrooms for young people, large lounge, separate kitchen and dining room, garden to both front and rear.",
+                features: ["2 young people's bedrooms", "Short walk to town", "Bus to shopping mall", "Ten-min drive to pool", "Park nearby"]
+            },
+            {
+                name: "Willowherb House",
+                location: "Romford",
+                description: "Pleasant family sized home in the Romford area with three bedrooms, large lounge/diner, separate kitchen, garden to both front and rear.",
+                features: ["3 bedrooms", "5-min walk to bus", "Ten-min walk to park", "Near primary school", "London Borough area"]
+            },
+            {
+                name: "Orchard House",
+                location: "Northamptonshire",
+                description: "Freehold semi-detached house with three bedrooms and one reception room, located approximately one mile from Kettering town center.",
+                features: ["3 bedrooms", "Semi-detached", "1 mile to town", "Supportive neighbours", "Freehold property"]
+            },
+            {
+                name: "Compton House",
+                location: "Northamptonshire",
+                description: "Property featuring 3 bedrooms, lounge/diner, separate kitchen, and rear garden. Located around a mile away from Kettering town centre.",
+                features: ["3 bedrooms", "Rear garden", "1 mile to town", "Close to schools", "Near GPs"]
+            },
+            {
+                name: "Anfield House",
+                location: "Northamptonshire",
+                description: "End-of-terrace house with four bedrooms, each with its own bathroom. Two reception areas, large lounge, separate kitchen and dining room.",
+                features: ["4 bedrooms", "En-suite bathrooms", "Two reception areas", "Large lounge", "Garden access"]
+            },
+            {
+                name: "Ribblesdale House",
+                location: "Corby",
+                description: "Three-bedroom, 1 reception, freehold semi-detached house offering secure and comfortable environment ideal for young people transitioning into semi-independent living.",
+                features: ["3 bedrooms", "Semi-detached", "1 mile to town", "14-min walk to bus", "Corby council area"]
+            }
+        ];
+
+        // Load and Display Houses
+        function loadHouses(filter = 'all') {
+            const container = document.getElementById('houses-container');
+            container.innerHTML = '';
+            
+            const filteredHouses = filter === 'all' 
+                ? houses 
+                : houses.filter(house => 
+                    house.location.toLowerCase().includes(filter.toLowerCase()));
+            
+            filteredHouses.forEach(house => {
+                const houseCard = document.createElement('div');
+                houseCard.className = 'house-card';
+                houseCard.innerHTML = `
+                    <div class="house-img">
+                        <i class="fas fa-home"></i>
+                    </div>
+                    <div class="house-content">
+                        <h3>${house.name}</h3>
+                        <div class="house-location">
+                            <i class="fas fa-map-marker-alt"></i> ${house.location}
+                        </div>
+                        <p>${house.description}</p>
+                        <div style="margin-top: 15px;">
+                            <strong>Key Features:</strong>
+                            <ul style="margin-top: 10px; padding-left: 20px;">
+                                ${house.features.map(feature => `<li>${feature}</li>`).join('')}
+                            </ul>
+                        </div>
+                    </div>
+                `;
+                container.appendChild(houseCard);
+            });
+            
+            // Update navigation buttons
+            document.querySelectorAll('.house-nav-btn').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            event?.target.classList.add('active');
+        }
+
+        // Filter Houses
+        function filterHouses(location) {
+            loadHouses(location);
+        }
+
+        // Form Submission
+        document.getElementById('messageForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Get form values
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const subject = document.getElementById('subject').value;
+            
+            // Show success message
+            alert(`Thank you, ${name}! Your message has been sent. We'll respond to you at ${email} regarding ${subject} within 24 hours.`);
+            
+            // Reset form
+            this.reset();
+        });
+
+        // AI Chatbot Functions
+        function toggleChatbot() {
+            const chatbotWindow = document.getElementById('chatbotWindow');
+            chatbotWindow.classList.toggle('active');
+        }
+
+        function addMessage(message, isUser = false) {
+            const messagesContainer = document.getElementById('chatMessages');
+            const messageDiv = document.createElement('div');
+            messageDiv.className = `message ${isUser ? 'user' : 'bot'}`;
+            messageDiv.innerHTML = `<div class="message-content">${message}</div>`;
+            messagesContainer.appendChild(messageDiv);
+            messagesContainer.scrollTop = messagesContainer.scrollHeight;
+        }
+
+        function handleChatInput(event) {
+            if (event.key === 'Enter') {
+                event.preventDefault();
+                const input = document.getElementById('chatInput');
+                const question = input.value.trim();
+                
+                if (question) {
+                    addMessage(question, true);
+                    input.value = '';
+                    
+                    // Process the question
+                    setTimeout(() => {
+                        const response = getChatbotResponse(question);
+                        addMessage(response);
+                    }, 500);
+                }
+            }
+        }
+
+        function askQuickQuestion(type) {
+            let question = '';
+            switch(type) {
+                case 'services':
+                    question = "What services does Blak Diamond offer?";
+                    break;
+                case 'houses':
+                    question = "How many houses does Blak Diamond have?";
+                    break;
+                case 'referral':
+                    question = "How do I make a referral?";
+                    break;
+                case 'contact':
+                    question = "What are your contact details?";
+                    break;
+            }
+            
+            addMessage(question, true);
+            
+            setTimeout(() => {
+                const response = getChatbotResponse(type);
+                addMessage(response);
+            }, 500);
+        }
+
+        function getChatbotResponse(question) {
+            const q = question.toLowerCase();
+            
+            if (q.includes('service') || q.includes('offer') || q.includes('provide')) {
+                return `Blak Diamond offers comprehensive social care services including:
+• Supported Living Accommodation
+• Solo & High-Support Placements  
+• Personalised Care & Domiciliary Support
+• Behavioural Intervention & Developmental Support
+• Staff Training & Development Programs
+• Referral & Transition Support
+
+We support young people aged 8-18 with tailored care solutions.`;
+            }
+            
+            if (q.includes('house') || q.includes('location') || q.includes('property')) {
+                return `We operate 13 homes across the UK:
+• Northamptonshire: Springhill House, Lawson House, Oakland House, Orchard House, Compton House, Anfield House
+• Romford area: Haydon House, Henbane House, Willowherb House
+• Nottingham: Southside House
+• Surrey: Heathfields House
+• Chigwell: Yellowpine House
+• Corby: Ribblesdale House
+
+Each home provides a safe, nurturing environment with access to amenities and community spaces.`;
+            }
+            
+            if (q.includes('referral') || q.includes('refer')) {
+                return `To make a referral to Blak Diamond:
+1. Call our team at +44 (0)7491 237921 or +44 (0)7544 787579
+2. Email info@blakdiamond.co.uk with referral details
+3. Complete our online contact form on the Message Us page
+
+We work with local authorities, families, and professionals to create smooth transitional pathways.`;
+            }
+            
+            if (q.includes('contact') || q.includes('email') || q.includes('phone') || q.includes('call')) {
+                return `Contact Blak Diamond:
+📞 Phone: +44 (0)7491 237921 | +44 (0)7544 787579
+✉️ Email: info@blakdiamond.co.uk (general) | careers@blakdiamond.co.uk (careers)
+📍 Address: Romford, Essex, RM3 8BS
+
+You can also use the Message Us form on our website for detailed enquiries.`;
+            }
+            
+            if (q.includes('age') || q.includes('young')) {
+                return `We support young people aged 8-18 years old, especially those transitioning through challenging circumstances toward semi-independent living. Our focus is on vulnerable young people who need specialist care and support.`;
+            }
+            
+            if (q.includes('mission') || q.includes('purpose') || q.includes('goal')) {
+                return `Our mission is to transform lives, support youth, and build independence. We foster growth, resilience and self-sufficiency by delivering tailored, reliable care and accommodation solutions for vulnerable young people.`;
+            }
+            
+            if (q.includes('team') || q.includes('staff') || q.includes('worker')) {
+                return `Our team is led by experienced social workers and care professionals with strong backgrounds in trauma, behavioural support and multi-agency collaboration. We invest in continuous professional development to ensure compassionate, evidence-led care.`;
+            }
+            
+            if (q.includes('career') || q.includes('job') || q.includes('work')) {
+                return `We're always looking for dedicated professionals to join our team. Send your CV to careers@blakdiamond.co.uk or check our website for current opportunities. We offer professional growth, reflective practice and impact-driven work.`;
+            }
+            
+            if (q.includes('hello') || q.includes('hi') || q.includes('hey')) {
+                return `Hello! I'm the Blak Diamond Assistant. I can help you learn about our services, houses, referral process, and contact information. What would you like to know?`;
+            }
+            
+            return `I understand you're asking about "${question}". For specific information about our services, houses, referral process, or contact details, please ask directly or use the quick question buttons above. You can also visit our website sections for comprehensive information.`;
+        }
+
+        // Voice Recognition
+        let isListening = false;
+        let recognition = null;
+
+        function toggleVoiceRecognition() {
+            const voiceBtn = document.getElementById('voiceBtn');
+            const voiceIndicator = document.getElementById('voiceIndicator');
+            
+            if (!isListening) {
+                // Start listening
+                if ('webkitSpeechRecognition' in window || 'SpeechRecognition' in window) {
+                    const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+                    recognition = new SpeechRecognition();
+                    recognition.continuous = false;
+                    recognition.interimResults = false;
+                    
+                    recognition.onstart = function() {
+                        isListening = true;
+                        voiceBtn.classList.add('listening');
+                        voiceIndicator.classList.add('active');
+                        voiceBtn.innerHTML = '<i class="fas fa-stop"></i>';
+                    };
+                    
+                    recognition.onresult = function(event) {
+                        const transcript = event.results[0][0].transcript;
+                        document.getElementById('chatInput').value = transcript;
+                        
+                        // Simulate pressing enter
+                        const enterEvent = new KeyboardEvent('keypress', {key: 'Enter'});
+                        document.getElementById('chatInput').dispatchEvent(enterEvent);
+                    };
+                    
+                    recognition.onerror = function(event) {
+                        console.error('Speech recognition error', event.error);
+                        stopListening();
+                    };
+                    
+                    recognition.onend = function() {
+                        stopListening();
+                    };
+                    
+                    recognition.start();
+                } else {
+                    alert("Your browser doesn't support speech recognition. Please use Chrome or Edge.");
+                }
+            } else {
+                stopListening();
+            }
+        }
+
+        function stopListening() {
+            if (recognition) {
+                recognition.stop();
+            }
+            isListening = false;
+            const voiceBtn = document.getElementById('voiceBtn');
+            const voiceIndicator = document.getElementById('voiceIndicator');
+            voiceBtn.classList.remove('listening');
+            voiceIndicator.classList.remove('active');
+            voiceBtn.innerHTML = '<i class="fas fa-microphone"></i>';
+        }
+
+        // Back to Top Button
+        window.addEventListener('scroll', function() {
+            const nav = document.querySelector('.main-nav');
+            const contactHeader = document.querySelector('.contact-header');
+            const backToTop = document.getElementById('backToTop');
+            
+            if (window.scrollY > 100) {
+                nav.style.boxShadow = '0 5px 20px rgba(0, 0, 0, 0.1)';
+                nav.style.top = '0';
+                contactHeader.style.display = 'none';
+                backToTop.classList.add('visible');
+            } else {
+                nav.style.boxShadow = 'var(--shadow)';
+                nav.style.top = '60px';
+                contactHeader.style.display = 'block';
+                backToTop.classList.remove('visible');
+            }
+        });
+
+        function scrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        }
+
+        // Initialize on page load
+        document.addEventListener('DOMContentLoaded', function() {
+            loadHouses();
+            
+            // Add initial chatbot message
+            setTimeout(() => {
+                if (!document.getElementById('chatbotWindow').classList.contains('active')) {
+                    addMessage("Need help? Click the robot icon to chat with me!");
+                }
+            }, 3000);
+        });
+    </script>
+</body>
+</html>
